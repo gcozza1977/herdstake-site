@@ -124,6 +124,12 @@ h2 em{font-style:normal;color:#a7aaa5}
 .cta .ctas{justify-content:center}
 .cta .mail{margin-top:18px;color:var(--muted);font-family:"JetBrains Mono",monospace;font-size:13px}
 
+.faq{margin-top:48px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);padding:24px 0}
+.faq summary{cursor:pointer;font-family:"Inter Tight",sans-serif;font-size:21px;font-weight:600;letter-spacing:-.02em;list-style:none;display:flex;justify-content:space-between}
+.faq summary::after{content:"+";color:var(--muted);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:12px;color:var(--muted);max-width:760px}
 footer{background:var(--ink);color:rgba(243,239,230,.55);padding:56px 0;font-size:13px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
 footer .logo{color:var(--bone)}
@@ -151,7 +157,7 @@ footer p{max-width:620px}
 
 <div class="nav" id="nav"><div class="wrap">
   <a class="logo" href="#"><svg><use href="#mark"/></svg>herdstake</a>
-  <nav><a href="#check">What we check</a><a href="#how">How it works</a><a href="#pilot">Pilot</a><a href="/feedyards.html">For feedyards</a><a class="pill" href="#contact">Talk to us</a></nav>
+  <nav><a href="#check">What we check</a><a href="#examiners">For examiners</a><a href="#how">How it works</a><a href="#pilot">Get started</a><a href="/feedyards.html">For feedyards</a><a class="pill" href="#contact">Talk to us</a></nav>
 </div></div>
 
 <header class="hero">
@@ -161,7 +167,7 @@ footer p{max-width:620px}
     <span class="chip"><i></i>Cattle collateral, verified from orbit</span>
     <h1>Every pledged head.<br><em>Accounted for.</em></h1>
     <p>Herdstake checks your borrowers' cattle from satellite imagery and public records, and sends you a dated, signed report in your state's inspection format, between site visits.</p>
-    <div class="ctas"><a class="btn b-light" href="#pilot">Start a 90-day pilot →</a><a class="btn b-line" href="#how">See how it works</a></div>
+    <div class="ctas"><a class="btn b-light" href="#pilot">Start with five borrowers →</a><a class="btn b-line" href="#how">See how it works</a></div>
   </div>
   <div class="hud" aria-hidden="true">
     <div><small>Claimed</small><b id="hClaim">6,000</b></div>
@@ -233,16 +239,66 @@ footer p{max-width:620px}
   </div>
 </section>
 
+
+<section class="dark" id="examiners">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Built for your examiners</span>
+      <h2>Evidence your file can stand on. <em>Not just a number.</em></h2>
+      <p class="lede">Collateral inspections are judged on who did them, when, and what they rest on. Every Herdstake report is built to answer those three questions.</p>
+    </div>
+    <div class="grid4 reveal">
+      <div class="cell"><span class="k">INDEPENDENT</span><h3>Not the borrower's word</h3><p>Counts come from imagery and public records, never from the borrower or the yard's own software.</p></div>
+      <div class="cell"><span class="k">DATED</span><h3>Every figure has a date</h3><p>The image date, the record dates and the review date sit on the face of the report.</p></div>
+      <div class="cell"><span class="k">DOCUMENTED</span><h3>Images and sources attached</h3><p>The pen images and the filings behind each finding go in your file with the report.</p></div>
+      <div class="cell"><span class="k">REVIEWED</span><h3>Signed by a person</h3><p>A qualified ag credit reviewer reads and signs every report before it reaches you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="coverage">
+  <div class="wrap">
+    <div class="how" style="margin-top:0">
+      <div class="reveal">
+        <span class="eyebrow">Coverage</span>
+        <h2>Texas, Kansas and Nebraska first.</h2>
+        <p class="lede">The three largest cattle-feeding states. We have mapped every permitted feeding site in them from state permit records, and matched them to open pens seen from the air.</p>
+      </div>
+      <div class="numbers reveal" style="grid-template-columns:1fr 1fr;margin-top:0">
+        <div class="num"><div class="was">permitted sites mapped</div><div class="big">4,789</div><p>Livestock sites across the three states that are, or may be, cattle feedyards.</p></div>
+        <div class="num"><div class="was">with open pens confirmed</div><div class="big">2,516</div><p>Sites where open cattle pens are visible within 1 km.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="data">
+  <div class="wrap">
+    <div class="how" style="margin-top:0;align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Your data</span>
+        <h2>Nothing touches your systems.</h2>
+        <p class="lede">We keep the footprint small on purpose, so your vendor review stays short.</p>
+      </div>
+      <ol class="steps reveal" style="border-color:rgba(243,239,230,.12)">
+        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">01</span><div><b style="color:var(--bone)">No system access</b><span style="color:rgba(243,239,230,.6)">You send a list. We never connect to your loan or core systems.</span></div></li>
+        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">02</span><div><b style="color:var(--bone)">No credit files</b><span style="color:rgba(243,239,230,.6)">We report on cattle and yards, not on anyone's credit.</span></div></li>
+        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">03</span><div><b style="color:var(--bone)">Yours alone</b><span style="color:rgba(243,239,230,.6)">Your list is used only for your reports and deleted on request. No other lender ever sees it.</span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <section id="pilot" style="padding-top:40px">
   <div class="wrap">
     <div class="reveal">
-      <span class="eyebrow">The pilot</span>
-      <h2>Five borrowers. Ninety days. <em>Under $5,000.</em></h2>
+      <span class="eyebrow">Getting started</span>
+      <h2>Start with five borrowers. <em>See the reports before you commit.</em></h2>
       <p class="lede">Sized to fit a loan officer's signing authority, with nothing to integrate.</p>
     </div>
     <div class="pilot reveal">
       <div class="pl">
-        <span class="eyebrow" style="color:rgba(243,239,230,.5)">Paid pilot</span>
+        <span class="eyebrow" style="color:rgba(243,239,230,.5)">First engagement</span>
         <div class="price">90 days</div>
         <p>Under $5,000 in total, priced per check. Many banks pass inspection costs to the borrower at renewal.</p>
         <svg viewBox="0 0 26 26"><use href="#mark"/></svg>
@@ -252,8 +308,23 @@ footer p{max-width:620px}
         <div class="prow"><span>Checks</span><div>One at the start, one at about day 90</div></div>
         <div class="prow"><span>You send</span><div>A list: borrower, yard, claimed head</div></div>
         <div class="prow"><span>You get</span><div>A dated report per borrower, plus a spreadsheet</div></div>
-        <a class="btn b-dark" href="mailto:greg@herdstake.com?subject=Herdstake%20pilot">Ask about a pilot →</a>
+        <a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%20first%20engagement">Start with five borrowers →</a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="faq">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Questions</span><h2>What lenders ask first.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Can satellites really count cattle in a packed pen?</summary><p>Not head by head with perfect accuracy, which is why we report a range rather than a single number, along with the image date. Every count outside the range goes to a brand inspector or vet for a physical count within 10 days.</p></details>
+      <details><summary>Does this replace our site visits?</summary><p>No. It's a documented check between visits. It tells you which borrowers deserve the next visit first.</p></details>
+      <details><summary>What do you need from us?</summary><p>A short list: borrower, yard and claimed head. Nothing else, and no access to your systems.</p></details>
+      <details><summary>Who sees our reports?</summary><p>Only you. Reports are for the ordering lender's own use and are never shared with another lender, a yard or anyone else.</p></details>
+      <details><summary>Which states do you cover?</summary><p>Texas, Kansas and Nebraska today. Tell us where your cattle book sits and we'll tell you when we reach it.</p></details>
+      <details><summary>Is this a guarantee or an appraisal?</summary><p>Neither. It's a monitoring report. It flags gaps early so you can act, and it doesn't put a value on the cattle.</p></details>
     </div>
   </div>
 </section>
@@ -262,9 +333,9 @@ footer p{max-width:620px}
   <div class="wrap reveal">
     <span class="eyebrow">Talk to us</span>
     <h2>Lenders, feedyards and researchers.</h2>
-    <p class="lede">Greg runs lender relationships at Herdstake.</p>
-    <div class="ctas"><a class="btn b-dark" href="mailto:greg@herdstake.com">Email Greg →</a></div>
-    <p class="mail">greg@herdstake.com</p>
+    <p class="lede">Tell us about your cattle book, your yard or your research. We answer within one business day.</p>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com">Contact us →</a></div>
+    <p class="mail">team@herdstake.com</p>
   </div>
 </section>
 

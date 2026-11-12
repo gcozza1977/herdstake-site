@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Herdstake — Cattle collateral, verified</title>
-<meta name="description" content="Herdstake verifies pledged cattle from satellite imagery and public records, and delivers a dated, signed report in your state's inspection format.">
-<meta property="og:title" content="Herdstake — Cattle collateral, verified">
-<meta property="og:description" content="Satellite and records checks on pledged cattle, delivered as a dated, signed report in your state's inspection format.">
+<title>Herdstake — Independent cattle collateral checks for ag lenders</title>
+<meta name="description" content="Independent cattle collateral checks between site visits: dated reports combining satellite imagery, yard capacity and public records, so lenders can spot gaps sooner. 90-day pilots open in Texas, Kansas and Nebraska.">
+<meta property="og:title" content="Herdstake — Independent cattle collateral checks between site visits">
+<meta property="og:description" content="Dated reports combining satellite imagery, yard capacity and public records, so ag lenders can spot gaps sooner.">
 <meta property="og:url" content="https://herdstake.com/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
@@ -14,139 +14,39 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d0c'/><g fill='%23f3efe6'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23ff8a3d'/></svg>">
+<link rel="stylesheet" href="/site.css">
 <style>
-:root{--ink:#0b0d0c;--ink2:#141816;--bone:#f3efe6;--paper:#faf8f3;--muted:#6b706c;--line:#e6e1d6;--sig:#ff8a3d;--ok:#7fd1a8}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
-h1,h2,h3,.disp{font-family:"Inter Tight",Inter,sans-serif;letter-spacing:-.035em;line-height:1.02;font-weight:600}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.02em}
-
-/* logo */
-.logo{display:flex;align-items:center;gap:11px;font-family:"Inter Tight",sans-serif;font-weight:600;font-size:21px;letter-spacing:-.03em}
-.logo svg{width:26px;height:26px}
-
-/* nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.solid{background:rgba(11,13,12,.82);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.08)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--bone)}
-.nav nav{display:flex;align-items:center;gap:34px;font-size:14.5px}
-.nav nav a{opacity:.72;transition:opacity .2s}.nav nav a:hover{opacity:1}
-.nav .pill{opacity:1;background:var(--bone);color:var(--ink);padding:10px 18px;border-radius:999px;font-weight:600}
-
-/* hero */
-.hero{position:relative;height:100vh;min-height:720px;background:var(--ink);color:var(--bone);overflow:hidden}
-#field{position:absolute;inset:0;width:100%;height:100%;display:block}
-.veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,12,.94) 0%,rgba(11,13,12,.78) 36%,rgba(11,13,12,.15) 70%,rgba(11,13,12,.35) 100%),linear-gradient(0deg,rgba(11,13,12,.9) 0%,rgba(11,13,12,0) 30%)}
-.hero .wrap{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
-.chip{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;padding:8px 14px;border:1px solid rgba(243,239,230,.18);border-radius:999px;width:fit-content;color:rgba(243,239,230,.82)}
-.chip i{width:7px;height:7px;border-radius:50%;background:var(--sig);box-shadow:0 0 0 4px rgba(255,138,61,.18);animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(255,138,61,0)}}
-.hero h1{font-size:clamp(46px,6.6vw,92px);max-width:820px;margin:28px 0 26px}
-.hero h1 em{font-style:normal;color:rgba(243,239,230,.42)}
-.hero p{font-size:19px;max-width:520px;color:rgba(243,239,230,.72)}
-.ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-1px)}
-.b-light{background:var(--bone);color:var(--ink)}
-.b-line{border:1px solid rgba(243,239,230,.25);color:var(--bone)}
-.b-dark{background:var(--ink);color:var(--bone)}
-.hud{position:absolute;right:32px;bottom:34px;display:flex;gap:12px}
-.hud div{background:rgba(11,13,12,.72);backdrop-filter:blur(10px);border:1px solid rgba(243,239,230,.12);border-radius:14px;padding:14px 18px;min-width:150px}
-.hud small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,230,.5)}
-.hud b{font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em}
-.hud .flag b{color:var(--sig)}
-.scrollcue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;color:rgba(243,239,230,.4)}
-
-/* sections */
-section{padding:140px 0}
-.eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
-h2{font-size:clamp(36px,4.4vw,60px);margin:18px 0 22px;max-width:860px}
-h2 em{font-style:normal;color:#a7aaa5}
-.lede{font-size:19px;color:var(--muted);max-width:620px}
-
-.numbers{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px;border-top:1px solid var(--line)}
-.num{padding:40px 40px 0 0}
-.num+.num{padding-left:40px;border-left:1px solid var(--line)}
-.num .big{font-family:"Inter Tight",sans-serif;font-size:64px;font-weight:600;letter-spacing:-.04em;line-height:1}
-.num .was{font-size:15px;color:#a7aaa5;text-decoration:line-through;margin-bottom:10px;font-family:"JetBrains Mono",monospace}
-.num p{margin-top:16px;color:var(--muted);font-size:15px;max-width:300px}
-.src{margin-top:40px;font-size:12px;color:#9a9e99}.src a{text-decoration:underline}
-
-.dark{background:var(--ink);color:var(--bone)}
-.dark .eyebrow{color:rgba(243,239,230,.5)}
-.dark .lede{color:rgba(243,239,230,.62)}
-.dark h2 em{color:rgba(243,239,230,.38)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(243,239,230,.1);border:1px solid rgba(243,239,230,.1);border-radius:20px;overflow:hidden;margin-top:72px}
-.cell{background:var(--ink);padding:40px 30px 44px}
-.cell .k{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--sig)}
-.cell h3{font-size:24px;margin:26px 0 12px;letter-spacing:-.02em}
-.cell p{color:rgba(243,239,230,.6);font-size:15px}
-
-.how{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:72px}
-.steps{list-style:none}
-.steps li{display:grid;grid-template-columns:56px 1fr;padding:26px 0;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps .i{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);padding-top:3px}
-.steps b{font-family:"Inter Tight",sans-serif;font-size:21px;font-weight:600;letter-spacing:-.02em;display:block;margin-bottom:4px}
-.steps span{color:var(--muted);font-size:15.5px}
-.report{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:0 40px 80px -30px rgba(11,13,12,.25)}
-.rtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
-.rtop .logo{font-size:16px}.rtop .logo svg{width:20px;height:20px}
-.rtop span{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted)}
-.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.rbox{background:var(--paper);border-radius:12px;padding:16px}
-.rbox small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.rbox b{display:block;font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;margin-top:4px}
-.rbox.alert{background:#fff1e8}.rbox.alert b{color:#d2611c}
-.rline{display:flex;justify-content:space-between;font-size:14px;padding:13px 0;border-bottom:1px solid var(--line)}
-.rline:first-of-type{margin-top:18px}
-.tagx{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#fff1e8;color:#d2611c}
-.rsig{margin-top:18px;font-size:12px;color:var(--muted)}
-.isnt{margin-top:56px;font-size:15.5px;color:var(--muted);max-width:820px;padding-top:28px;border-top:1px solid var(--line)}
-.isnt b{color:var(--ink)}
-
-.pilot{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:24px;overflow:hidden;margin-top:72px;border:1px solid var(--line);background:#fff}
-.pl{background:var(--ink);color:var(--bone);padding:56px;position:relative;overflow:hidden}
-.pl .price{font-family:"Inter Tight",sans-serif;font-size:96px;font-weight:600;letter-spacing:-.05em;line-height:1;margin:26px 0 10px}
-.pl p{color:rgba(243,239,230,.65);max-width:340px}
-.pl svg{position:absolute;right:-40px;bottom:-40px;width:260px;opacity:.12}
-.pr{padding:48px 56px}
-.prow{display:grid;grid-template-columns:130px 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px}
-.prow span{color:var(--muted)}
-.pr .btn{margin-top:30px}
-
-.cta{text-align:center}
-.cta h2{margin-left:auto;margin-right:auto}
-.cta .lede{margin:0 auto}
-.cta .ctas{justify-content:center}
-.cta .mail{margin-top:18px;color:var(--muted);font-family:"JetBrains Mono",monospace;font-size:13px}
-
-.faq{margin-top:48px;border-top:1px solid var(--line)}
-.faq details{border-bottom:1px solid var(--line);padding:24px 0}
-.faq summary{cursor:pointer;font-family:"Inter Tight",sans-serif;font-size:21px;font-weight:600;letter-spacing:-.02em;list-style:none;display:flex;justify-content:space-between}
-.faq summary::after{content:"+";color:var(--muted);font-weight:400}
-.faq details[open] summary::after{content:"–"}
-.faq p{margin-top:12px;color:var(--muted);max-width:760px}
-footer{background:var(--ink);color:rgba(243,239,230,.55);padding:56px 0;font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-footer .logo{color:var(--bone)}
-footer p{max-width:620px}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:980px){
- .grid4{grid-template-columns:1fr 1fr}.how,.pilot{grid-template-columns:1fr}
- .numbers{grid-template-columns:1fr}.num+.num{border-left:0;padding-left:0;border-top:1px solid var(--line)}
- .nav nav a:not(.pill){display:none}.hud{display:none}
- .veil{background:linear-gradient(0deg,rgba(11,13,12,.95) 10%,rgba(11,13,12,.55) 100%)}
- section{padding:96px 0}
-}
-@media(max-width:560px){.grid4{grid-template-columns:1fr}.pl,.pr{padding:36px}.prow{grid-template-columns:1fr}.pl .price{font-size:72px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.hero{position:relative;min-height:100vh;background:var(--ink);color:var(--bone);overflow:hidden;display:flex;align-items:center;padding:116px 0 72px}
+#field{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:.5}
+.veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,12,.97) 0%,rgba(11,13,12,.88) 48%,rgba(11,13,12,.6) 100%)}
+.hgrid{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+.hero h1{font-size:clamp(40px,5.2vw,72px);margin:24px 0 22px;max-width:720px}
+.hero h1 em{font-style:normal;color:rgba(243,239,230,.46)}
+.hero .sub{font-size:19px;max-width:560px;color:rgba(243,239,230,.76)}
+.three{list-style:none;margin-top:30px;max-width:600px;border-top:1px solid rgba(243,239,230,.12)}
+.three li{display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(243,239,230,.12);font-size:15.5px;color:rgba(243,239,230,.88)}
+.three li span{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.08em;color:var(--sig);padding-top:3px}
+.hcard .btn{margin-top:18px}
+.status .grid4{background:var(--line);border-color:var(--line)}
+.status .cell{background:#fff}
+.status .cell h3{color:var(--ink)}
+.status .cell p{color:var(--muted)}
+.status .cell p a{color:var(--sigd);text-decoration:underline}
+.flag h4{font-family:"Inter Tight",sans-serif;font-size:19px;letter-spacing:-.02em;margin-bottom:6px}
+.flag .bar{position:relative;height:46px;margin:22px 0 8px;background:var(--paper);border-radius:10px}
+.flag .rng{position:absolute;top:0;bottom:0;background:#e8f5ee;border-left:2px solid var(--ok);border-right:2px solid var(--ok)}
+.flag .tol{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,#fff7f0 0 6px,#ffe9d9 6px 12px)}
+.flag .ln{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--sigd)}
+.flag .axis{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted)}
+.flag .pt{position:absolute;top:50%;transform:translate(-50%,-50%);width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid var(--muted);display:grid;place-items:center;font:600 11px "JetBrains Mono",monospace;color:var(--muted)}
+.flag .pt.ok{border-color:var(--ok);color:var(--ok)}.flag .pt.bad{border-color:var(--sigd);color:var(--sigd)}
+.flag .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--muted)}
+.flag .sw{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.flag .sw.g{background:#e8f5ee;border:1px solid var(--ok)}.flag .sw.h{background:repeating-linear-gradient(135deg,#fff7f0 0 3px,#ffd9bf 3px 6px)}.flag .sw.l{width:3px;background:var(--sigd)}
+.flag .ex{margin-top:16px}
+.flag .ex .rline:first-of-type{margin-top:0}
+@media(max-width:980px){.hgrid{grid-template-columns:1fr;gap:44px}.hero{min-height:auto;padding:120px 0 64px}.veil{background:linear-gradient(0deg,rgba(11,13,12,.97) 20%,rgba(11,13,12,.8) 100%)}}
+@media(max-width:560px){.three li{grid-template-columns:1fr;gap:2px}}
 </style>
 </head>
 <body>
@@ -156,25 +56,39 @@ footer p{max-width:620px}
 </defs></svg>
 
 <div class="nav" id="nav"><div class="wrap">
-  <a class="logo" href="#"><svg><use href="#mark"/></svg>herdstake</a>
-  <nav><a href="#check">What we check</a><a href="#examiners">For examiners</a><a href="#how">How it works</a><a href="#pilot">Get started</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a class="pill" href="#contact">Talk to us</a></nav>
+  <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
+  <nav><a href="#check">What we check</a><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="#pilot">Pilot</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a class="pill" href="#contact">Talk to us</a></nav>
 </div></div>
 
 <header class="hero">
   <canvas id="field" aria-hidden="true"></canvas>
   <div class="veil"></div>
-  <div class="wrap">
-    <span class="chip"><i></i>Cattle collateral, verified from orbit</span>
-    <h1>Every pledged head.<br><em>Accounted for.</em></h1>
-    <p>Herdstake checks your borrowers' cattle from satellite imagery and public records, and sends you a dated, signed report in your state's inspection format, between site visits.</p>
-    <div class="ctas"><a class="btn b-light" href="#pilot">Start with five borrowers →</a><a class="btn b-line" href="#how">See how it works</a></div>
+  <div class="wrap hgrid">
+    <div>
+      <span class="chip"><i></i>Pilot open · Texas, Kansas, Nebraska</span>
+      <h1>Independent cattle collateral checks <em>between site visits.</em></h1>
+      <p class="sub">Dated reports combining satellite imagery, yard capacity and public records, so lenders can spot gaps sooner.</p>
+      <ul class="three">
+        <li><span>FOR</span>Ag banks and Farm Credit lenders with cattle on feed</li>
+        <li><span>YOU GET</span>A dated report per borrower, plus a spreadsheet</li>
+        <li><span>TRY NOW</span>A 90-day pilot on up to five borrowers, capped at $4,950</li>
+      </ul>
+      <div class="ctas"><a class="btn b-light" href="#pilot">Start a pilot →</a><a class="btn b-line" href="/sample-report.html">View sample report</a></div>
+    </div>
+    <div class="report hcard">
+      <div class="rtop"><span class="logo"><svg><use href="#mark"/></svg>herdstake</span><span class="mono">COLLATERAL CHECK · ILLUSTRATIVE SAMPLE</span></div>
+      <div class="rmeta">Example State Bank · Borrower: Example Cattle Co. · Castro County, TX · Image date Nov 4, 2026</div>
+      <div class="rgrid">
+        <div class="rbox"><small>Claimed head</small><b>6,000</b><i>from the borrower's report</i></div>
+        <div class="rbox alert"><small>Our estimate</small><b>4,150–4,400</b><i>90% range on the image date</i></div>
+      </div>
+      <div class="rline"><span>Permitted capacity</span><b>8,000 head</b></div>
+      <div class="rline"><span>Other liens on file</span><b>1 UCC filing</b></div>
+      <div class="rline"><span>Result</span><span class="tagx">Claim above range · physical count recommended</span></div>
+      <p class="rnote">The range means we're 90% confident the true head count on the image date sits inside it. Names and figures are illustrative.</p>
+      <a class="btn b-dark sm" href="/sample-report.html">View the full sample report →</a>
+    </div>
   </div>
-  <div class="hud" aria-hidden="true">
-    <div><small>Claimed</small><b id="hClaim">6,000</b></div>
-    <div><small>Counted</small><b id="hCount">0</b></div>
-    <div class="flag"><small>Status</small><b id="hStat">Scanning</b></div>
-  </div>
-  <div class="scrollcue mono">SCROLL</div>
 </header>
 
 <section>
@@ -187,9 +101,25 @@ footer p{max-width:620px}
     <div class="numbers reveal">
       <div class="num"><div class="was">29,500 on paper</div><div class="big">9,900</div><p>Head Agridime's receiver actually found.</p></div>
       <div class="num"><div class="was">89,522 pledged</div><div class="big">10,575</div><p>Head found at 7M Cattle Feeders.</p></div>
-      <div class="num"><div class="was">checked mostly in person</div><div class="big">11.2M</div><p>Head on feed in US feedlots of 1,000+ head, as of September 2026.</p></div>
+      <div class="num"><div class="was plain">checked mostly in person</div><div class="big">11.2M</div><p>Head on feed in US feedlots of 1,000+ head, as of September 2026.</p></div>
     </div>
     <p class="src">Sources: <a href="https://www.dtnpf.com/agriculture/web/ag/livestock/article/2024/05/14/cftc-alleges-texas-based-agridime">DTN</a> · <a href="https://www.beefmagazine.com/news/texas-cattle-feeding-ponzi-scheme-exposed">Beef</a> · <a href="https://esmis.nal.usda.gov/sites/default/release-files/796064/cofd0926.txt">USDA NASS, Cattle on Feed</a></p>
+  </div>
+</section>
+
+<section class="status" id="status" style="padding-top:0">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Where we are</span>
+      <h2>Pilots are open. <em>Accuracy is being tested in public.</em></h2>
+      <p class="lede">Here is exactly what is running, what is built, and what we are still proving.</p>
+    </div>
+    <div class="grid4 reveal">
+      <div class="cell"><span class="k">OPEN NOW</span><h3>Lender pilots</h3><p>Paid 90-day pilots for lenders with cattle on feed in Texas, Kansas and Nebraska.</p></div>
+      <div class="cell"><span class="k">BUILT</span><h3>Yard map</h3><p>4,789 permitted livestock sites mapped from state permit records, with open pens confirmed at 2,516 of them.</p></div>
+      <div class="cell"><span class="k">BEING TESTED</span><h3>Count accuracy</h3><p>A blind test against five feedyards' own pen sheets, enrolling now. Results go on our <a href="/method.html#accuracy">method page</a> as they come in, misses included.</p></div>
+      <div class="cell"><span class="k">2027</span><h3>Pledge registry</h3><p>A shared check that flags cattle pledged to more than one lender, without showing anyone's loan book.</p></div>
+    </div>
   </div>
 </section>
 
@@ -202,23 +132,8 @@ footer p{max-width:620px}
     <div class="grid4 reveal">
       <div class="cell"><span class="k">01 / COUNT</span><h3>Head count</h3><p>Counted from 30 cm satellite imagery and given as a range, with the image date.</p></div>
       <div class="cell"><span class="k">02 / CAPACITY</span><h3>Claim vs. capacity</h3><p>The borrower's claimed head set against the yard's permitted capacity.</p></div>
-      <div class="cell"><span class="k">03 / LIENS</span><h3>Other pledges</h3><p>Other liens on the same cattle, from UCC filings and the state Clear Title lists.</p></div>
+      <div class="cell"><span class="k">03 / LIENS</span><h3>Other pledges</h3><p>Other liens on the same cattle, from UCC filings and, where a state keeps one, its Clear Title list.</p></div>
       <div class="cell"><span class="k">04 / RECORDS</span><h3>Yard records</h3><p>The yard's Packers &amp; Stockyards registration and any court records.</p></div>
-    </div>
-  </div>
-</section>
-
-
-<section class="dark" id="platform">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">What we're building</span>
-      <h2>One record of the cattle behind the credit. <em>Three ways to use it.</em></h2>
-    </div>
-    <div class="grid4 reveal" style="grid-template-columns:repeat(3,1fr)">
-      <div class="cell"><span class="k">VERIFY · AVAILABLE NOW</span><h3>Collateral checks</h3><p>Satellite counts and records checks on each borrower's cattle, delivered as a dated, signed report between site visits.</p></div>
-      <div class="cell"><span class="k">REGISTRY · 2027</span><h3>Pledge registry</h3><p>A shared check that tells a lender when the same cattle are already pledged elsewhere, without revealing who else lent. Double-pledging is how the biggest frauds hid.</p></div>
-      <div class="cell"><span class="k">OFFICE · FOR MEAT PLANTS</span><h3>USDA paperwork, handled</h3><p>For small meat processors: inspection paperwork, labeling files and fee-relief applications, prepared for them. <a href="/plants.html" style="color:var(--sig)">For plants →</a></p></div>
     </div>
   </div>
 </section>
@@ -227,46 +142,53 @@ footer p{max-width:620px}
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">How it works</span>
-      <h2>A list in. <em>A signed report out.</em></h2>
+      <h2>A list in. <em>A reviewed report out.</em></h2>
       <p class="lede">No integration and no credit files. You send a short list, and we do the rest.</p>
     </div>
     <div class="how">
       <ol class="steps reveal">
         <li><span class="i">01</span><div><b>You send a list</b><span>Borrower, yard and claimed head. Nothing touches your systems.</span></div></li>
         <li><span class="i">02</span><div><b>We check each yard</b><span>Satellite imagery, permits, lien filings and yard records.</span></div></li>
-        <li><span class="i">03</span><div><b>You get a dated report</b><span>In your state's inspection format, plus a spreadsheet, reviewed and signed by a qualified ag credit reviewer.</span></div></li>
-        <li><span class="i">04</span><div><b>Gaps get a physical count</b><span>If a count falls outside the range, a brand inspector or vet counts within 10 days.</span></div></li>
+        <li><span class="i">03</span><div><b>You get a dated report</b><span>A count range, the claim against it, capacity, liens and yard records, plus a spreadsheet. Reviewed and signed by our collateral review lead before it reaches you.</span></div></li>
+        <li><span class="i">04</span><div><b>Gaps get a physical count</b><span>If a claim sits well above our range, a brand inspector or vet counts within 10 days.</span></div></li>
       </ol>
-      <div class="report reveal" aria-hidden="true">
-        <div class="rtop"><span class="logo"><svg><use href="#mark"/></svg>herdstake</span><span>COLLATERAL CHECK · SAMPLE</span></div>
-        <div class="rgrid">
-          <div class="rbox"><small>Claimed head</small><b>6,000</b></div>
-          <div class="rbox alert"><small>Counted range</small><b>4,150–4,400</b></div>
+      <div class="report flag reveal">
+        <div class="rtop"><span class="logo"><svg><use href="#mark"/></svg>herdstake</span><span class="mono">HOW A GAP IS FLAGGED</span></div>
+        <h4>We flag a claim only when it sits more than 15% above the top of our range.</h4>
+        <div class="bar" aria-hidden="true">
+          <div class="rng" style="left:28.75%;width:6.25%"></div>
+          <div class="tol" style="left:35%;width:16.5%"></div>
+          <div class="ln" style="left:51.5%"></div>
+          <div class="pt ok" style="left:32.5%">A</div>
+          <div class="pt" style="left:45%">B</div>
+          <div class="pt bad" style="left:75%">C</div>
         </div>
-        <div class="rline"><span>Image date</span><b>Nov 4</b></div>
-        <div class="rline"><span>Permitted capacity</span><b>8,000</b></div>
-        <div class="rline"><span>Other liens found</span><span class="tagx">1 filing</span></div>
-        <div class="rline"><span>Result</span><span class="tagx">Gap · physical count ordered</span></div>
-        <p class="rsig">Reviewed and signed by a qualified ag credit reviewer · Illustrative figures</p>
+        <div class="axis"><span>3,000 head</span><span>5,000</span><span>7,000</span></div>
+        <div class="legend"><span><i class="sw g"></i>Our range 4,150–4,400</span><span><i class="sw h"></i>Tolerance to 5,060</span><span><i class="sw l"></i>Flag line</span></div>
+        <div class="ex">
+          <div class="rline"><span>A · Claimed 4,300</span><span class="tago">Inside the range · consistent</span></div>
+          <div class="rline"><span>B · Claimed 4,800</span><b>Within tolerance · noted</b></div>
+          <div class="rline"><span>C · Claimed 6,000</span><span class="tagx">Above the flag line · physical count</span></div>
+        </div>
+        <p class="rnote">15% is our starting margin; the blind test will tune it. A report never says "fraud" or "missing": a gap can have ordinary causes, such as cattle shipped since the borrower's last report, and a physical count settles it.</p>
       </div>
     </div>
     <p class="isnt reveal"><b>What it isn't:</b> a guarantee, an appraisal or a replacement for site visits. It's a documented check between visits, built for the independence, dating and documentation examiners look for.</p>
   </div>
 </section>
 
-
 <section class="dark" id="examiners">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Built for your examiners</span>
       <h2>Evidence your file can stand on. <em>Not just a number.</em></h2>
-      <p class="lede">Collateral inspections are judged on who did them, when, and what they rest on. Every Herdstake report is built to answer those three questions.</p>
+      <p class="lede">Collateral inspections are judged on who did them, when, and what they rest on. Every Herdstake report is built to answer those three questions. <a class="u" href="/method.html#examiners">How each file maps to exam guidance →</a></p>
     </div>
     <div class="grid4 reveal">
-      <div class="cell"><span class="k">INDEPENDENT</span><h3>Not the borrower's word</h3><p>Counts come from imagery and public records, never from the borrower or the yard's own software.</p></div>
+      <div class="cell"><span class="k">INDEPENDENT</span><h3>Not the borrower's word</h3><p>The lender orders and pays. Counts come from imagery and public records, never from the borrower or the yard's own software.</p></div>
       <div class="cell"><span class="k">DATED</span><h3>Every figure has a date</h3><p>The image date, the record dates and the review date sit on the face of the report.</p></div>
-      <div class="cell"><span class="k">DOCUMENTED</span><h3>Images and sources attached</h3><p>The pen images and the filings behind each finding go in your file with the report.</p></div>
-      <div class="cell"><span class="k">REVIEWED</span><h3>Signed by a person</h3><p>A qualified ag credit reviewer reads and signs every report before it reaches you.</p></div>
+      <div class="cell"><span class="k">DOCUMENTED</span><h3>Sources in the file</h3><p>The image ID, the permit and lien filings behind each finding, and the pen images, licensed for your examiners to see.</p></div>
+      <div class="cell"><span class="k">REVIEWED</span><h3>Signed by a person</h3><p>Our collateral review lead, with at least five years in ag lending, ag bank examination or livestock collateral inspection, signs every report.</p></div>
     </div>
   </div>
 </section>
@@ -280,8 +202,8 @@ footer p{max-width:620px}
         <p class="lede">The three largest cattle-feeding states. We have mapped every permitted feeding site in them from state permit records, and matched them to open pens seen from the air.</p>
       </div>
       <div class="numbers reveal" style="grid-template-columns:1fr 1fr;margin-top:0">
-        <div class="num"><div class="was">permitted sites mapped</div><div class="big">4,789</div><p>Livestock sites across the three states that are, or may be, cattle feedyards.</p></div>
-        <div class="num"><div class="was">with open pens confirmed</div><div class="big">2,516</div><p>Sites where open cattle pens are visible within 1 km.</p></div>
+        <div class="num"><div class="was plain">permitted sites mapped</div><div class="big">4,789</div><p>Livestock sites across the three states that are, or may be, cattle feedyards.</p></div>
+        <div class="num"><div class="was plain">open pens confirmed</div><div class="big">2,516</div><p>Sites where open cattle pens are visible within 1 km.</p></div>
       </div>
     </div>
   </div>
@@ -295,16 +217,17 @@ footer p{max-width:620px}
         <h2>Nothing touches your systems.</h2>
         <p class="lede">We keep the footprint small on purpose, so your vendor review stays short.</p>
       </div>
-      <ol class="steps reveal" style="border-color:rgba(243,239,230,.12)">
-        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">01</span><div><b style="color:var(--bone)">No system access</b><span style="color:rgba(243,239,230,.6)">You send a list. We never connect to your loan or core systems.</span></div></li>
-        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">02</span><div><b style="color:var(--bone)">No credit files</b><span style="color:rgba(243,239,230,.6)">We report on cattle and yards, not on anyone's credit.</span></div></li>
-        <li style="border-color:rgba(243,239,230,.12)"><span class="i" style="color:var(--sig)">03</span><div><b style="color:var(--bone)">Yours alone</b><span style="color:rgba(243,239,230,.6)">Your list is used only for your reports and deleted on request. No other lender ever sees it.</span></div></li>
+      <ol class="steps reveal">
+        <li><span class="i">01</span><div><b>No system access</b><span>You send a list. We never connect to your loan or core systems.</span></div></li>
+        <li><span class="i">02</span><div><b>Only what we need</b><span>Borrower name, yard and claimed head. No Social Security numbers, financial statements or credit files.</span></div></li>
+        <li><span class="i">03</span><div><b>How to send it</b><span>Email it to team@herdstake.com, or through your bank's secure email and we'll reply the same way.</span></div></li>
+        <li><span class="i">04</span><div><b>Yours alone, then deleted</b><span>Used only for your reports and never shown to another lender. Deleted within 30 days of your request, or of a pilot that ends without a contract.</span></div></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section id="pilot" style="padding-top:40px">
+<section id="pilot">
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Getting started</span>
@@ -313,111 +236,86 @@ footer p{max-width:620px}
     </div>
     <div class="pilot reveal">
       <div class="pl">
-        <span class="eyebrow" style="color:rgba(243,239,230,.5)">First engagement</span>
-        <div class="price">90 days</div>
-        <p>Under $5,000 in total, priced per check. Many banks pass inspection costs to the borrower at renewal.</p>
+        <span class="eyebrow">90-day pilot</span>
+        <div class="price">$0.50</div>
+        <div class="unit">a head per check · $250 minimum per check</div>
+        <p>Capped at $4,950 for the whole pilot. Four borrowers averaging 1,200 head, checked twice, come to $4,800.</p>
+        <p>You order and pay, which keeps the check independent of the borrower. Many banks pass inspection costs to the borrower at renewal.</p>
         <svg viewBox="0 0 26 26"><use href="#mark"/></svg>
       </div>
       <div class="pr">
         <div class="prow"><span>Borrowers</span><div>Up to five cattle borrowers you pick</div></div>
         <div class="prow"><span>Checks</span><div>One at the start, one at about day 90</div></div>
         <div class="prow"><span>You send</span><div>A list: borrower, yard, claimed head</div></div>
-        <div class="prow"><span>You get</span><div>A dated report per borrower, plus a spreadsheet</div></div>
-        <a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%20first%20engagement">Start with five borrowers →</a>
+        <div class="prow"><span>You get</span><div>A dated report per borrower plus a spreadsheet, within 10 business days of your list</div></div>
+        <div class="prow"><span>If a claim is above the range</span><div>We tell you the day the report is final and arrange a physical count by a brand inspector or vet within 10 days. You pay the counter's fee at cost. If the count confirms the claim, we refund that check.</div></div>
+        <div class="prow"><span>At day 90</span><div>A yes or no on quarterly checks across your cattle book</div></div>
+        <div class="prow"><span>Paperwork</span><div>A one-page pilot letter. No integration, no system access.</div></div>
+        <a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%2090-day%20pilot">Start a pilot →</a>
       </div>
     </div>
   </div>
 </section>
 
-
-<section id="faq">
+<section id="faq" style="padding-top:0">
   <div class="wrap">
     <div class="reveal"><span class="eyebrow">Questions</span><h2>What lenders ask first.</h2></div>
     <div class="faq reveal">
-      <details><summary>Can satellites really count cattle in a packed pen?</summary><p>Not head by head with perfect accuracy, which is why we report a range rather than a single number, along with the image date. Every count outside the range goes to a brand inspector or vet for a physical count within 10 days.</p></details>
-      <details><summary>Does this replace our site visits?</summary><p>No. It's a documented check between visits. It tells you which borrowers deserve the next visit first.</p></details>
+      <details><summary>Can satellites really count cattle in a packed pen?</summary><p>Not head by head with perfect accuracy. That's why every report gives a range with a 90% confidence level and the image date, and why a claim above the range gets a physical count rather than an accusation. The frauds this is built to catch weren't close calls: in the three cases with published counts, between 66% and 95% of the claimed cattle weren't there.</p></details>
+      <details><summary>How accurate are you?</summary><p>We're measuring it now in a blind test against five feedyards' own pen sheets, with our counts fixed before we see theirs. Our target is within about 5%. The results, misses included, go on our <a href="/method.html#accuracy">method page</a> as they come in.</p></details>
+      <details><summary>Does this replace our site visits?</summary><p>No. It's a documented check between visits that tells you which borrowers deserve the next visit first. We still recommend a physical count on every flag and at least once a year.</p></details>
+      <details><summary>Who reviews and signs the reports?</summary><p>Our collateral review lead, who has at least five years in agricultural lending, ag bank examination or livestock collateral inspection. No report reaches you without that review and signature.</p></details>
       <details><summary>What do you need from us?</summary><p>A short list: borrower, yard and claimed head. Nothing else, and no access to your systems.</p></details>
-      <details><summary>Who sees our reports?</summary><p>Only you. Reports are for the ordering lender's own use and are never shared with another lender, a yard or anyone else.</p></details>
+      <details><summary>Who sees our reports?</summary><p>Only you. Reports are for the ordering lender's own use and never go to another lender, a yard or anyone else. If a borrower disputes a finding, we work through you.</p></details>
       <details><summary>Which states do you cover?</summary><p>Texas, Kansas and Nebraska today. Tell us where your cattle book sits and we'll tell you when we reach it.</p></details>
-      <details><summary>Is this a guarantee or an appraisal?</summary><p>Neither. It's a monitoring report. It flags gaps early so you can act, and it doesn't put a value on the cattle.</p></details>
+      <details><summary>Is this a guarantee or an appraisal?</summary><p>Neither. It's a monitoring report. We report head and location, and you apply your own price. It flags gaps early so you can act.</p></details>
     </div>
   </div>
 </section>
 
-<section id="contact" class="cta">
+<section id="contact" class="cta" style="padding-top:40px">
   <div class="wrap reveal">
     <span class="eyebrow">Talk to us</span>
     <h2>Lenders, feedyards and researchers.</h2>
     <p class="lede">Tell us about your cattle book, your yard or your research. We answer within one business day.</p>
-    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com">Contact us →</a></div>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com">Contact us →</a><a class="btn b-out" href="/sample-report.html">View sample report</a></div>
     <p class="mail">team@herdstake.com</p>
   </div>
 </section>
 
 <footer><div class="wrap">
-  <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
-  <p>© 2026 Herdstake. Reports are monitoring reports for the ordering lender's own use, not guarantees, appraisals or consumer reports.</p>
+  <div>
+    <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
+    <div class="flinks"><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+  </div>
+  <p>© 2026 Herdstake LLC. Reports are monitoring reports for the ordering lender's own use, not guarantees, appraisals or consumer reports.</p>
 </div></footer>
 
 <script>
-// nav
-const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
-// reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+const nav=document.getElementById('nav');const solid=()=>nav.classList.toggle('solid',scrollY>40);addEventListener('scroll',solid);solid();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// hero: live aerial feedyard scan
+// hero background: a still aerial view of feedyard pens (decoration only, no data)
 (()=>{
-const c=document.getElementById('field'),x=c.getContext('2d');let W,H,D=Math.min(devicePixelRatio||1,2),pens=[],t0=performance.now();
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function rnd(s){let v=Math.sin(s*9301+49297)*233280;return v-Math.floor(v)}
-function build(){
-  W=c.clientWidth;H=c.clientHeight;c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);pens=[];
-  const pw=120,ph=86,gap=14,cols=Math.ceil(W/(pw+gap))+3,rows=Math.ceil(H/(ph+gap))+3;let k=0;
-  for(let r=0;r<rows;r++)for(let q=0;q<cols;q++){
-    const alley=(q%4===3)?26:0;
-    const px=q*(pw+gap)+Math.floor(q/4)*26-60,py=r*(ph+gap)+(r>2?24:0)-50;
-    const fill=rnd(k*3.1)<.18?0:Math.floor(40+rnd(k*7.7)*120);const cows=[];
-    for(let i=0;i<fill;i++)cows.push({x:px+8+rnd(k*31+i*1.7)*(pw-16),y:py+8+rnd(k*17+i*2.3)*(ph-22),p:rnd(i*5.1+k)*6.28});
-    pens.push({x:px,y:py,w:pw,h:ph,cows,n:fill});k++;
-  }
-}
-build();addEventListener('resize',build);
-const hC=document.getElementById('hCount'),hS=document.getElementById('hStat');
-let target=0,shown=0,last=-1;
-function draw(now){
-  const t=(now-t0)/1000;
+const c=document.getElementById('field'),x=c.getContext('2d');
+function rnd(s){const v=Math.sin(s*9301+49297)*233280;return v-Math.floor(v)}
+function draw(){
+  const D=Math.min(devicePixelRatio||1,2),W=c.clientWidth,H=c.clientHeight;
+  c.width=W*D;c.height=H*D;x.setTransform(D,0,0,D,0,0);
   x.fillStyle='#1a1d19';x.fillRect(0,0,W,H);
-  // ground texture
-  for(let i=0;i<60;i++){x.fillStyle=`rgba(${110+i%3*8},${104+i%5*4},${80},.05)`;const rx=rnd(i*13)*W,ry=rnd(i*29)*H;x.beginPath();x.ellipse(rx,ry,220,120,0,0,6.28);x.fill()}
-  const drift=reduce?0:t*6;
-  x.save();x.translate(-drift%134,0);
-  for(const p of pens){
-    x.fillStyle='#3a362b';x.fillRect(p.x,p.y,p.w,p.h);
-    x.fillStyle='#4a4536';x.fillRect(p.x,p.y+p.h-10,p.w,10); // feed bunk apron
-    x.strokeStyle='rgba(225,215,190,.22)';x.lineWidth=1.2;x.strokeRect(p.x+.5,p.y+.5,p.w,p.h);
+  const pw=120,ph=86,gap=14,cols=Math.ceil(W/(pw+gap))+2,rows=Math.ceil(H/(ph+gap))+2;let k=0;
+  for(let r=0;r<rows;r++)for(let q=0;q<cols;q++){
+    const px=q*(pw+gap)+Math.floor(q/4)*26-40,py=r*(ph+gap)+(r>2?24:0)-40;
+    x.fillStyle='#3a362b';x.fillRect(px,py,pw,ph);
+    x.fillStyle='#4a4536';x.fillRect(px,py+ph-10,pw,10);
+    x.strokeStyle='rgba(225,215,190,.2)';x.lineWidth=1.2;x.strokeRect(px+.5,py+.5,pw,ph);
+    const n=rnd(k*3.1)<.18?0:Math.floor(40+rnd(k*7.7)*120);
     x.fillStyle='rgba(20,18,14,.85)';
-    for(const cw of p.cows){const j=reduce?0:Math.sin(t*.8+cw.p)*.8;x.fillRect(cw.x+j,cw.y,3.2,2)}
+    for(let i=0;i<n;i++)x.fillRect(px+8+rnd(k*31+i*1.7)*(pw-16),py+8+rnd(k*17+i*2.3)*(ph-22),3.2,2);
+    k++;
   }
-  // scan reticle: walks pen to pen near right side
-  const vis=pens.filter(p=>{const sx=p.x-(drift%134);return sx>W*.6&&sx<W-170&&p.y>90&&p.y<H-230});
-  if(vis.length){
-    const idx=Math.floor(t/2.4)%vis.length,p=vis[idx],ph=(t%2.4)/2.4;
-    if(idx!==last){last=idx;target=p.n;shown=0}
-    shown+=(target-shown)*.08;
-    x.strokeStyle='#ff8a3d';x.lineWidth=2;x.setLineDash([8,6]);x.strokeRect(p.x-4,p.y-4,p.w+8,p.h+8);x.setLineDash([]);
-    const sy=p.y+p.h*ph;x.fillStyle='rgba(255,138,61,.16)';x.fillRect(p.x,p.y,p.w,sy-p.y);
-    x.fillStyle='#ff8a3d';x.fillRect(p.x,sy,p.w,1.5);
-    x.font='500 11px JetBrains Mono, monospace';x.fillStyle='#ff8a3d';x.fillText('PEN '+String(idx+14).padStart(3,'0')+' · '+Math.round(shown)+' HD',p.x,p.y-10);
-    const total=4150+Math.round((idx*37)%250);
-    hC.textContent=(total).toLocaleString();hS.textContent=ph>.5?'Gap flagged':'Scanning';
-  }
-  x.restore();
-  // vignette grid lines
-  x.strokeStyle='rgba(243,239,230,.04)';x.lineWidth=1;for(let gx=0;gx<W;gx+=80){x.beginPath();x.moveTo(gx,0);x.lineTo(gx,H);x.stroke()}
-  if(!reduce)requestAnimationFrame(draw);
 }
-requestAnimationFrame(draw);
+draw();let t;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(draw,150)});
 })();
 </script>
 </body>

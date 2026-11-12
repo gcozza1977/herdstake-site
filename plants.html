@@ -4,183 +4,116 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Herdstake Office — USDA paperwork for small meat plants</title>
-<meta name="description" content="Herdstake verifies pledged cattle from satellite imagery and public records, and delivers a dated, signed report in your state's inspection format.">
-<meta property="og:title" content="Herdstake — Cattle collateral, verified">
-<meta property="og:description" content="Satellite and records checks on pledged cattle, delivered as a dated, signed report in your state's inspection format.">
-<meta property="og:url" content="https://herdstake.com/">
+<meta name="description" content="Herdstake Office prepares USDA inspection paperwork for small and very small meat plants, starting with the FSIS overtime and holiday fee cut: 30% for small plants, 75% for very small plants that file. Plans from $300 a month.">
+<meta property="og:title" content="Herdstake Office — USDA paperwork for small meat plants">
+<meta property="og:description" content="Your USDA paperwork, handled, starting with the FSIS overtime and holiday fee cut most small plants haven't filed for.">
+<meta property="og:url" content="https://herdstake.com/plants.html">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<link rel="canonical" href="https://herdstake.com/">
+<link rel="canonical" href="https://herdstake.com/plants.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d0c'/><g fill='%23f3efe6'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23ff8a3d'/></svg>">
+<link rel="stylesheet" href="/site.css">
 <style>
-:root{--ink:#0b0d0c;--ink2:#141816;--bone:#f3efe6;--paper:#faf8f3;--muted:#6b706c;--line:#e6e1d6;--sig:#ff8a3d;--ok:#7fd1a8}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
-h1,h2,h3,.disp{font-family:"Inter Tight",Inter,sans-serif;letter-spacing:-.035em;line-height:1.02;font-weight:600}
-.mono{font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.02em}
-
-/* logo */
-.logo{display:flex;align-items:center;gap:11px;font-family:"Inter Tight",sans-serif;font-weight:600;font-size:21px;letter-spacing:-.03em}
-.logo svg{width:26px;height:26px}
-
-/* nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.solid{background:rgba(11,13,12,.82);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.08)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;color:var(--bone)}
-.nav nav{display:flex;align-items:center;gap:34px;font-size:14.5px}
-.nav nav a{opacity:.72;transition:opacity .2s}.nav nav a:hover{opacity:1}
-.nav .pill{opacity:1;background:var(--bone);color:var(--ink);padding:10px 18px;border-radius:999px;font-weight:600}
-
-/* hero */
-.hero{position:relative;height:100vh;min-height:720px;background:var(--ink);color:var(--bone);overflow:hidden}
-#field{position:absolute;inset:0;width:100%;height:100%;display:block}
-.veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,12,.94) 0%,rgba(11,13,12,.78) 36%,rgba(11,13,12,.15) 70%,rgba(11,13,12,.35) 100%),linear-gradient(0deg,rgba(11,13,12,.9) 0%,rgba(11,13,12,0) 30%)}
-.hero .wrap{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center}
-.chip{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;padding:8px 14px;border:1px solid rgba(243,239,230,.18);border-radius:999px;width:fit-content;color:rgba(243,239,230,.82)}
-.chip i{width:7px;height:7px;border-radius:50%;background:var(--sig);box-shadow:0 0 0 4px rgba(255,138,61,.18);animation:pulse 2s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(255,138,61,0)}}
-.hero h1{font-size:clamp(46px,6.6vw,92px);max-width:820px;margin:28px 0 26px}
-.hero h1 em{font-style:normal;color:rgba(243,239,230,.42)}
-.hero p{font-size:19px;max-width:520px;color:rgba(243,239,230,.72)}
-.ctas{display:flex;gap:14px;margin-top:40px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-1px)}
-.b-light{background:var(--bone);color:var(--ink)}
-.b-line{border:1px solid rgba(243,239,230,.25);color:var(--bone)}
-.b-dark{background:var(--ink);color:var(--bone)}
-.hud{position:absolute;right:32px;bottom:34px;display:flex;gap:12px}
-.hud div{background:rgba(11,13,12,.72);backdrop-filter:blur(10px);border:1px solid rgba(243,239,230,.12);border-radius:14px;padding:14px 18px;min-width:150px}
-.hud small{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,239,230,.5)}
-.hud b{font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em}
-.hud .flag b{color:var(--sig)}
-.scrollcue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;color:rgba(243,239,230,.4)}
-
-/* sections */
-section{padding:140px 0}
-.eyebrow{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
-h2{font-size:clamp(36px,4.4vw,60px);margin:18px 0 22px;max-width:860px}
-h2 em{font-style:normal;color:#a7aaa5}
-.lede{font-size:19px;color:var(--muted);max-width:620px}
-
-.numbers{display:grid;grid-template-columns:repeat(3,1fr);margin-top:80px;border-top:1px solid var(--line)}
-.num{padding:40px 40px 0 0}
-.num+.num{padding-left:40px;border-left:1px solid var(--line)}
-.num .big{font-family:"Inter Tight",sans-serif;font-size:64px;font-weight:600;letter-spacing:-.04em;line-height:1}
-.num .was{font-size:15px;color:#a7aaa5;text-decoration:line-through;margin-bottom:10px;font-family:"JetBrains Mono",monospace}
-.num p{margin-top:16px;color:var(--muted);font-size:15px;max-width:300px}
-.src{margin-top:40px;font-size:12px;color:#9a9e99}.src a{text-decoration:underline}
-
-.dark{background:var(--ink);color:var(--bone)}
-.dark .eyebrow{color:rgba(243,239,230,.5)}
-.dark .lede{color:rgba(243,239,230,.62)}
-.dark h2 em{color:rgba(243,239,230,.38)}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(243,239,230,.1);border:1px solid rgba(243,239,230,.1);border-radius:20px;overflow:hidden;margin-top:72px}
-.cell{background:var(--ink);padding:40px 30px 44px}
-.cell .k{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--sig)}
-.cell h3{font-size:24px;margin:26px 0 12px;letter-spacing:-.02em}
-.cell p{color:rgba(243,239,230,.6);font-size:15px}
-
-.how{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:72px}
-.steps{list-style:none}
-.steps li{display:grid;grid-template-columns:56px 1fr;padding:26px 0;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps .i{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);padding-top:3px}
-.steps b{font-family:"Inter Tight",sans-serif;font-size:21px;font-weight:600;letter-spacing:-.02em;display:block;margin-bottom:4px}
-.steps span{color:var(--muted);font-size:15.5px}
-.report{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:0 40px 80px -30px rgba(11,13,12,.25)}
-.rtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
-.rtop .logo{font-size:16px}.rtop .logo svg{width:20px;height:20px}
-.rtop span{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted)}
-.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.rbox{background:var(--paper);border-radius:12px;padding:16px}
-.rbox small{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.rbox b{display:block;font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;margin-top:4px}
-.rbox.alert{background:#fff1e8}.rbox.alert b{color:#d2611c}
-.rline{display:flex;justify-content:space-between;font-size:14px;padding:13px 0;border-bottom:1px solid var(--line)}
-.rline:first-of-type{margin-top:18px}
-.tagx{font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:#fff1e8;color:#d2611c}
-.rsig{margin-top:18px;font-size:12px;color:var(--muted)}
-.isnt{margin-top:56px;font-size:15.5px;color:var(--muted);max-width:820px;padding-top:28px;border-top:1px solid var(--line)}
-.isnt b{color:var(--ink)}
-
-.pilot{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:24px;overflow:hidden;margin-top:72px;border:1px solid var(--line);background:#fff}
-.pl{background:var(--ink);color:var(--bone);padding:56px;position:relative;overflow:hidden}
-.pl .price{font-family:"Inter Tight",sans-serif;font-size:96px;font-weight:600;letter-spacing:-.05em;line-height:1;margin:26px 0 10px}
-.pl p{color:rgba(243,239,230,.65);max-width:340px}
-.pl svg{position:absolute;right:-40px;bottom:-40px;width:260px;opacity:.12}
-.pr{padding:48px 56px}
-.prow{display:grid;grid-template-columns:130px 1fr;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px}
-.prow span{color:var(--muted)}
-.pr .btn{margin-top:30px}
-
-.cta{text-align:center}
-.cta h2{margin-left:auto;margin-right:auto}
-.cta .lede{margin:0 auto}
-.cta .ctas{justify-content:center}
-.cta .mail{margin-top:18px;color:var(--muted);font-family:"JetBrains Mono",monospace;font-size:13px}
-
-footer{background:var(--ink);color:rgba(243,239,230,.55);padding:56px 0;font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-footer .logo{color:var(--bone)}
-footer p{max-width:620px}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:980px){
- .grid4{grid-template-columns:1fr 1fr}.how,.pilot{grid-template-columns:1fr}
- .numbers{grid-template-columns:1fr}.num+.num{border-left:0;padding-left:0;border-top:1px solid var(--line)}
- .nav nav a:not(.pill){display:none}.hud{display:none}
- .veil{background:linear-gradient(0deg,rgba(11,13,12,.95) 10%,rgba(11,13,12,.55) 100%)}
- section{padding:96px 0}
-}
-@media(max-width:560px){.grid4{grid-template-columns:1fr}.pl,.pr{padding:36px}.prow{grid-template-columns:1fr}.pl .price{font-size:72px}}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.light .grid4{background:var(--line);border-color:var(--line)}
+.light .cell{background:#fff}.light .cell h3{color:var(--ink)}.light .cell p{color:var(--muted)}
+.g3{grid-template-columns:repeat(3,1fr)!important}
+.save{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:56px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:56px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px 30px}
+.plan.mid{border-color:var(--ink);box-shadow:0 30px 60px -34px rgba(11,13,12,.35)}
+.plan .k{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--sigd)}
+.plan .p{font-family:"Inter Tight",sans-serif;font-size:52px;font-weight:600;letter-spacing:-.04em;line-height:1;margin:16px 0 4px}
+.plan .p small{font-size:16px;letter-spacing:0;color:var(--muted);font-weight:500}
+.plan ul{list-style:none;margin-top:18px}
+.plan li{padding:9px 0;border-top:1px solid var(--line);font-size:15px;color:#3c403d}
+.terms{margin-top:22px;font-size:15px;color:var(--muted);max-width:820px}
+@media(max-width:980px){.save,.plans{grid-template-columns:1fr}.g3{grid-template-columns:1fr 1fr!important}}
+@media(max-width:560px){.g3{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
 </defs></svg>
+
 <div class="nav solid" id="nav"><div class="wrap">
   <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
-  <nav><a href="/#check">What we check</a><a href="/#how">How it works</a><a href="/#pilot">Pilot</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a class="pill" href="/#contact">Talk to us</a></nav>
+  <nav><a href="#fees">Fee cut</a><a href="#handle">What we handle</a><a href="#plans">Plans</a><a href="/">For lenders</a><a class="pill" href="#contact">Talk to us</a></nav>
 </div></div>
-<section class="dark" style="padding-top:180px">
- <div class="wrap">
-  <span class="eyebrow">For small meat plants</span>
-  <h2>Your USDA paperwork, handled. <em>You run the plant.</em></h2>
-  <p class="lede">Small and very small plants carry the same inspection paperwork as the big packers, without a compliance department. Herdstake Office prepares it for you, on deadline, and keeps your files ready for your inspector.</p>
- </div>
-</section>
-<section>
- <div class="wrap">
-  <span class="eyebrow">What we handle</span>
-  <h2>The files that eat your week.</h2>
-  <div class="grid4" style="background:var(--line);border-color:var(--line)">
-   <div class="cell" style="background:#fff"><span class="k">LABELS</span><h3 style="color:var(--ink)">"Product of USA" files</h3><p style="color:var(--muted)">The records behind your origin claims, kept in order for verification.</p></div>
-   <div class="cell" style="background:#fff"><span class="k">FEES</span><h3 style="color:var(--ink)">Overtime-fee relief</h3><p style="color:var(--muted)">Applications for the inspection-fee relief available to small plants, prepared and filed.</p></div>
-   <div class="cell" style="background:#fff"><span class="k">RECORDS</span><h3 style="color:var(--ink)">Inspection-ready files</h3><p style="color:var(--muted)">Your written programs and daily records organized so an inspector's visit is routine.</p></div>
-   <div class="cell" style="background:#fff"><span class="k">DEADLINES</span><h3 style="color:var(--ink)">Nothing missed</h3><p style="color:var(--muted)">We track the dates and remind you before anything is due.</p></div>
+
+<header class="dark phead">
+  <div class="wrap">
+    <span class="eyebrow">Herdstake Office · for small meat plants</span>
+    <h1>Your USDA paperwork, handled. <em>You run the plant.</em></h1>
+    <p class="lede">Small and very small plants carry the same inspection paperwork as the big packers, without a compliance department. Herdstake Office prepares it for you, on deadline, and keeps your files ready for your inspector.</p>
+    <div class="ctas"><a class="btn b-light" href="mailto:team@herdstake.com?subject=File%20our%20FSIS%20fee%20cut">File our fee cut →</a><a class="btn b-line" href="#plans">See the plans</a></div>
   </div>
- </div>
+</header>
+
+<section class="light" id="fees">
+  <div class="wrap">
+    <span class="eyebrow">Start with money back</span>
+    <h2>FSIS is cutting overtime and holiday inspection fees. <em>Only for plants that file.</em></h2>
+    <div class="save">
+      <div>
+        <p class="lede">Through Sept 30, 2027, while the funds last, small plants get 30% off FSIS overtime and holiday inspection fees and very small plants get 75% off, once they file FSIS Form 5200-16. We prepare it in your first week. You check it and sign it.</p>
+        <p class="src">Source: <a href="https://content.govdelivery.com/accounts/USFSIS/bulletins/4273c48">FSIS Updates for Small Plants, Sept 9, 2026</a> · rates: <a href="https://www.govinfo.gov/content/pkg/FR-2026-02-06/pdf/2026-02352.pdf">Federal Register 2026-02352</a></p>
+      </div>
+      <div class="report">
+        <div class="rtop"><span class="logo"><svg><use href="#mark"/></svg>herdstake</span><span class="mono">WHAT THE CUT CAN BE WORTH</span></div>
+        <div class="rline"><span>Overtime rate, 2026</span><b>$89.68 an hour</b></div>
+        <div class="rline"><span>A very small plant billed 4 hours a week</span><b>about $18,700 a year</b></div>
+        <div class="rline"><span>Back at 75%</span><span class="tago">about $14,000 a year</span></div>
+        <p class="rnote">An example, not a quote: your savings depend on your overtime and holiday hours and on FSIS confirming your size.</p>
+      </div>
+    </div>
+  </div>
 </section>
-<section class="cta" style="padding-top:20px">
- <div class="wrap">
-  <h2>Tell us about your plant.</h2>
-  <p class="lede">A 15-minute call is enough to see what we can take off your plate.</p>
-  <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Meat%20plant%20paperwork">Contact us →</a></div>
-  <p class="mail">team@herdstake.com</p>
- </div>
+
+<section class="light" id="handle" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">What we handle</span>
+    <h2>The files that eat your week.</h2>
+    <div class="grid4 g3">
+      <div class="cell"><span class="k">FEES</span><h3>Fee-cut filing</h3><p>Form 5200-16 prepared from your records, for your signature, in your first week.</p></div>
+      <div class="cell"><span class="k">LABELS</span><h3>"Product of USA" files</h3><p>The records behind your origin claims, kept in order for verification.</p></div>
+      <div class="cell"><span class="k">RECORDS</span><h3>Inspection-ready files</h3><p>Your written programs and daily records organized so an inspector's visit is routine.</p></div>
+      <div class="cell"><span class="k">NRs</span><h3>Noncompliance responses</h3><p>Responses and appeals drafted for you to review, on the deadline.</p></div>
+      <div class="cell"><span class="k">HACCP</span><h3>Reassessments</h3><p>Your yearly HACCP reassessment written up and kept with your plan.</p></div>
+      <div class="cell"><span class="k">DEADLINES</span><h3>Nothing missed</h3><p>We track the dates and remind you before anything is due.</p></div>
+    </div>
+  </div>
 </section>
+
+<section class="light" id="plans" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">Plans</span>
+    <h2>Pick the plan that fits. <em>Change it any month.</em></h2>
+    <div class="plans">
+      <div class="plan"><span class="k">BASIC</span><div class="p">$300<small> a month</small></div><ul><li>Records kept in order</li><li>Deadline reminders</li><li>The fee-cut filing</li></ul></div>
+      <div class="plan mid"><span class="k">STANDARD</span><div class="p">$750<small> a month</small></div><ul><li>Everything in Basic</li><li>Label and "Product of USA" files</li><li>Noncompliance responses and appeals</li></ul></div>
+      <div class="plan"><span class="k">FULL</span><div class="p">$1,500<small> a month</small></div><ul><li>Everything in Standard</li><li>HACCP reassessments</li><li>Export certificates</li><li>One grant application a year</li></ul></div>
+    </div>
+    <p class="terms">Your first 90 days on any plan are billed at the Basic price. Grant applications outside the Full plan are $3,000 flat, never a share of the award. You review and sign everything; nothing is filed in your name without your OK.</p>
+  </div>
+</section>
+
+<section class="cta" id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <h2>Tell us about your plant.</h2>
+    <p class="lede">A 15-minute call is enough to see what we can take off your plate, starting with the fee cut.</p>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Meat%20plant%20paperwork">Contact us →</a></div>
+    <p class="mail">team@herdstake.com</p>
+  </div>
+</section>
+
 <footer><div class="wrap">
-  <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
-  <p>© 2026 Herdstake. Reports are monitoring reports for the ordering lender's own use, not guarantees, appraisals or consumer reports.</p>
+  <div>
+    <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
+    <div class="flinks"><a href="/">For lenders</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+  </div>
+  <p>© 2026 Herdstake LLC. Herdstake Office prepares filings for the plant to review and sign; the plant stays responsible for what it submits.</p>
 </div></footer>
 </body>
 </html>

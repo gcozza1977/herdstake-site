@@ -9,6 +9,7 @@
 <meta property="og:description" content="What a lender receives for each borrower. Illustrative figures.">
 <meta property="og:url" content="https://herdstake.com/sample-report.html">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://herdstake.com/img/og.jpg">
 <link rel="canonical" href="https://herdstake.com/sample-report.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -35,9 +36,9 @@
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .kpis .rbox b{font-size:24px}
 .sec .tbl{max-width:none;margin-top:4px}
-.checks{list-style:none}
-.checks li{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:#3c403d}
-.checks li::before{content:"✓";color:var(--ok);font-weight:700}
+.exam{list-style:none}
+.exam li{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:#3c403d}
+.exam li::before{content:"✓";color:var(--ok);font-weight:700}
 .sig{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:26px 36px 0;padding:18px 0;border-top:1px dashed #cfc9bc;font-size:14px}
 .sig .line{min-width:260px;border-bottom:1px solid var(--ink);height:28px;margin-bottom:6px;font-family:"Inter Tight",sans-serif;font-style:italic;color:#9a9e99}
 .fine{padding:20px 36px 30px;font-size:12px;color:var(--muted)}
@@ -46,21 +47,37 @@
 @media print{.nav,.tools,footer,.cta{display:none}body{background:#fff}section{padding:0}.paper{box-shadow:none;border:0}}
 </style>
 </head>
-<body>
-<svg width="0" height="0" style="position:absolute"><defs>
+<body class="light-top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
 </defs></svg>
 
-<div class="nav solid" id="nav"><div class="wrap">
-  <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
-  <nav><a href="/#check">What we check</a><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="/#pilot">Pilot</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a class="pill" href="/#contact">Talk to us</a></nav>
-</div></div>
+<div class="nav" id="nav">
+  <div class="wrap bar">
+    <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/plants.html">Meat plants</a>
+      <a class="pill" href="/#contact">Talk to us</a>
+    </nav>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Main menu">
+    <a href="/#how">How it works</a>
+    <a href="/sample-report.html">Sample report</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/plants.html">Meat plants</a>
+    <a class="pill" href="/#contact">Talk to us</a>
+  </nav>
+</div>
 
 <section style="padding-top:128px;padding-bottom:72px">
   <div class="wrap">
     <div class="tools">
       <div><span class="eyebrow">Sample report</span><h2 style="font-size:clamp(28px,3.4vw,40px);margin:10px 0 0">What a lender receives for each borrower.</h2></div>
-      <a class="btn b-out sm" href="/method.html">How we check →</a>
+      <a class="btn b-dark sm" href="/#pricing">Pilot pricing →</a>
     </div>
 
     <article class="paper">
@@ -118,7 +135,7 @@
 
       <div class="sec">
         <h3>5 · Examiner file</h3>
-        <ul class="checks">
+        <ul class="exam">
           <li><span><b>Independent:</b> ordered and paid for by Example State Bank; prepared by Herdstake, which has no interest in the borrower or the yard.</span></li>
           <li><span><b>Dated:</b> image Nov 4, 2026; records searched Nov 5; reviewed Nov 6.</span></li>
           <li><span><b>Documented:</b> image ID, permit, UCC file number and method version; pen images in the attached file, licensed for the bank's examiners.</span></li>
@@ -141,7 +158,7 @@
   <div class="wrap">
     <h2>Run this on five of your borrowers.</h2>
     <p class="lede">$0.50 a head per check, $250 minimum, capped at $4,950 for the 90-day pilot.</p>
-    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%2090-day%20pilot">Reserve a pilot →</a><a class="btn b-out" href="/#pilot">Pilot terms</a></div>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%2090-day%20pilot">Reserve a pilot →</a><a class="btn b-out" href="/#pricing">Pilot pricing</a></div>
     <p class="mail">team@herdstake.com</p>
   </div>
 </section>
@@ -149,9 +166,10 @@
 <footer><div class="wrap">
   <div>
     <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
-    <div class="flinks"><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+    <div class="flinks"><a href="/#how">How it works</a><a href="/sample-report.html">Sample report</a><a href="/#pricing">Pricing</a><a href="/plants.html">Meat plants</a><a href="/feedyards.html">Feedyards</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
   </div>
-  <p>© 2026 Herdstake LLC. Reports are monitoring reports for the ordering lender's own use, not guarantees, appraisals or consumer reports.</p>
+  <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
 </div></footer>
+<script src="/site.js" defer></script>
 </body>
 </html>

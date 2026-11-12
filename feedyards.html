@@ -9,6 +9,8 @@
 <meta property="og:description" content="Fewer site counts for honest yards. Help us prove it.">
 <meta property="og:url" content="https://herdstake.com/feedyards.html">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://herdstake.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://herdstake.com/feedyards.html">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,51 +18,70 @@
 <link rel="stylesheet" href="/site.css">
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute"><defs>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
 </defs></svg>
 
-<div class="nav solid" id="nav"><div class="wrap">
-  <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
-  <nav><a href="/#check">What we check</a><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="/#pilot">Pilot</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a class="pill" href="#contact">Talk to us</a></nav>
-</div></div>
+<div class="nav" id="nav">
+  <div class="wrap bar">
+    <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/plants.html">Meat plants</a>
+      <a class="pill" href="/#contact">Talk to us</a>
+    </nav>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Main menu">
+    <a href="/#how">How it works</a>
+    <a href="/sample-report.html">Sample report</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/plants.html">Meat plants</a>
+    <a class="pill" href="/#contact">Talk to us</a>
+  </nav>
+</div>
 
-<header class="dark phead">
+<header class="phead">
+  <img class="bg" src="/img/pens.jpg" alt="">
+  <div class="shade"></div>
   <div class="wrap">
-    <span class="eyebrow">For feedyards</span>
+    <span class="chip"><i></i>For feedyards · Texas, Kansas, Nebraska</span>
     <h1>Fewer site counts for honest yards. <em>Help us prove it.</em></h1>
-    <p class="lede">Since the Agridime and 7M cases, lenders have been sending more people out to count pens. Herdstake checks cattle from satellite imagery so a lender can verify a borrower without another visit. Before we sell checks at scale, we're testing our counts against five real yards in Texas, Kansas and Nebraska.</p>
+    <p class="sub">We count cattle from satellite images so lenders can check a borrower without another visit. Before we sell checks at scale, we're testing our counts against five real yards.</p>
   </div>
 </header>
 
 <section>
-  <div class="wrap">
-    <span class="eyebrow">The blind test</span>
-    <h2>What we ask, and what you get.</h2>
-    <div class="how" style="margin-top:48px">
-      <ol class="steps">
-        <li><span class="i">01</span><div><b>We count first</b><span>We count your pens from satellite images on a few recent dates and send you our numbers before seeing yours.</span></div></li>
-        <li><span class="i">02</span><div><b>You share pen sheets</b><span>Head by pen, or total head on feed, for those same dates. If we both want to, a few more dates over the next three months.</span></div></li>
-        <li><span class="i">03</span><div><b>We compare</b><span>Our counts are fixed before we see yours, so the test is honest. Our target is within about 5%.</span></div></li>
-        <li><span class="i">04</span><div><b>A 15-minute call</b><span>To walk through your pen map once, at the start.</span></div></li>
-      </ol>
-      <div class="report">
-        <div class="rtop"><span class="logo"><svg><use href="#mark"/></svg>herdstake</span><span class="mono">WHAT YOUR YARD GETS</span></div>
-        <div class="rline"><span>Your full satellite count history</span><b>Yours to keep</b></div>
-        <div class="rline"><span>Paid for your time</span><b>$500</b></div>
-        <div class="rline"><span>Confidentiality letter</span><b>Signed first</b></div>
-        <div class="rline"><span>Your records shown to lenders</span><b>Never</b></div>
-        <p class="rnote">Your records are used only for the test and deleted when it ends. Lenders see only the overall accuracy figure, never a yard's name.</p>
-      </div>
+  <div class="wrap split" style="align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">The blind test</span>
+      <h2>What we ask.</h2>
+      <ul class="checks">
+        <li>We count your pens from satellite images on a few past dates, and send you our numbers before we see yours.</li>
+        <li>You share your pen sheets, or total head on feed, for those same dates.</li>
+        <li>One 15-minute call to walk through your pen map.</li>
+        <li>If we both want to, a few more dates over the next three months.</li>
+      </ul>
+    </div>
+    <div class="card reveal">
+      <div class="ct">WHAT YOUR YARD GETS</div>
+      <div class="row"><span>Your full satellite count history</span><b>Yours to keep</b></div>
+      <div class="row"><span>Paid for your time</span><b>$500</b></div>
+      <div class="row"><span>Confidentiality letter</span><b>Signed first</b></div>
+      <div class="row"><span>Your records shown to lenders</span><span class="good">Never</span></div>
+      <p class="note">Your records are used only for the test and deleted when it ends. Lenders see only the overall accuracy figure, never a yard's name.</p>
     </div>
   </div>
 </section>
 
-<section class="cta" id="contact" style="padding-top:20px">
-  <div class="wrap">
+<section class="cta" style="padding-top:20px">
+  <div class="wrap reveal">
     <h2>Want your yard in the test?</h2>
     <p class="lede">A 15-minute call is all it takes to start.</p>
-    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Feedyard%20blind%20test">Contact us →</a><a class="btn b-out" href="/method.html#accuracy">How we measure accuracy</a></div>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Feedyard%20blind%20test">Email us →</a></div>
     <p class="mail">team@herdstake.com</p>
   </div>
 </section>
@@ -68,9 +89,11 @@
 <footer><div class="wrap">
   <div>
     <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
-    <div class="flinks"><a href="/method.html">How we check</a><a href="/sample-report.html">Sample report</a><a href="/feedyards.html">Feedyards</a><a href="/plants.html">Meat plants</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+    <div class="flinks"><a href="/#how">How it works</a><a href="/sample-report.html">Sample report</a><a href="/#pricing">Pricing</a><a href="/plants.html">Meat plants</a><a href="/feedyards.html">Feedyards</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
   </div>
-  <p>© 2026 Herdstake LLC. Reports are monitoring reports for the ordering lender's own use, not guarantees, appraisals or consumer reports.</p>
+  <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
 </div></footer>
+
+<script src="/site.js" defer></script>
 </body>
 </html>

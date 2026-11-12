@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herdstake — Sample records screen</title>
+<meta name="description" content="An illustrative Herdstake records screen: each borrower's claimed head against permitted capacity, other liens, buyer notices, yard registration, court records and screwworm zones, with next steps.">
+<meta property="og:title" content="Herdstake — Sample records screen">
+<meta property="og:description" content="What $195 per borrower gets a lender. Illustrative figures.">
+<meta property="og:url" content="https://herdstake.com/records-screen.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://herdstake.com/img/og.jpg">
+<link rel="canonical" href="https://herdstake.com/records-screen.html">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d0c'/><g fill='%23f3efe6'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23ff8a3d'/></svg>">
+<link rel="stylesheet" href="/site.css">
+<style>
+.paper{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 30px 70px -36px rgba(11,13,12,.3);overflow:hidden}
+.ph{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:30px 36px;border-bottom:1px solid var(--line)}
+.ph .logo{font-size:18px}.ph .logo svg{width:22px;height:22px}
+.ph .t{text-align:right}
+.ph .t b{display:block;font-family:"Inter Tight",sans-serif;font-size:19px;letter-spacing:-.02em}
+.ph .t span{font-size:12px;color:var(--muted)}
+.ribbon{background:#fff7d6;color:#6b5600;font-size:13px;padding:10px 36px;border-bottom:1px solid #f0e3a6}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
+.meta div{padding:13px 36px;border-bottom:1px solid var(--line);font-size:14px}
+.meta div:nth-child(odd){border-right:1px solid var(--line)}
+.meta small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.banner{margin:26px 36px 0;padding:18px 20px;border-radius:12px;background:#fff1e8;border:1px solid #ffd2b5;color:#8a3a0c;font-size:15.5px}
+.banner b{font-family:"Inter Tight",sans-serif;font-size:18px;letter-spacing:-.015em;display:block;color:var(--sigd);margin-bottom:2px}
+.sec{padding:26px 36px 4px}
+.sec h3{font-size:13px;font-family:Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+.sec p{font-size:15px;color:#3c403d;max-width:760px}
+.sec p+p{margin-top:10px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kpis .rbox b{font-size:24px}
+.sec .tbl{max-width:none;margin-top:4px}
+.exam{list-style:none}
+.exam li{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:#3c403d}
+.exam li::before{content:"✓";color:var(--ok);font-weight:700}
+.sig{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:26px 36px 0;padding:18px 0;border-top:1px dashed #cfc9bc;font-size:14px}
+.sig .line{min-width:260px;border-bottom:1px solid var(--ink);height:28px;margin-bottom:6px;font-family:"Inter Tight",sans-serif;font-style:italic;color:#9a9e99}
+.fine{padding:20px 36px 30px;font-size:12px;color:var(--muted)}
+.res{font-weight:600}.res.flag{color:var(--sigd)}.res.rev{color:#8a6400}.res.ok{color:var(--ok)}
+.tools{max-width:900px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+@media(max-width:640px){.ph,.sec,.fine{padding-left:20px;padding-right:20px}.ribbon{padding:10px 20px}.meta{grid-template-columns:1fr}.meta div{padding:12px 20px}.meta div:nth-child(odd){border-right:0}.banner,.sig{margin-left:20px;margin-right:20px}.kpis{grid-template-columns:1fr}}
+@media(max-width:640px){.sec .tbl{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}.sec .tbl th,.sec .tbl td{min-width:120px}}
+@media print{.nav,.tools,footer,.cta{display:none}body{background:#fff}section{padding:0}.paper{box-shadow:none;border:0}}
+</style>
+</head>
+<body class="light-top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
+</defs></svg>
+
+<div class="nav" id="nav">
+  <div class="wrap bar">
+    <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/#pricing">Pricing</a>
+      <a class="pill" href="/#contact">Talk to us</a>
+    </nav>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Main menu">
+    <a href="/#how">How it works</a>
+    <a href="/sample-report.html">Sample report</a>
+    <a href="/#pricing">Pricing</a>
+    <a class="pill" href="/#contact">Talk to us</a>
+  </nav>
+</div>
+
+<section style="padding-top:128px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="tools">
+      <div><span class="eyebrow">Sample records screen</span><h2 style="font-size:clamp(28px,3.4vw,40px);margin:10px 0 0">What $195 per borrower gets you.</h2></div>
+      <a class="btn b-dark sm" href="/records-screen-intake.csv" download>Download the list template</a>
+    </div>
+
+    <article class="paper">
+      <div class="ph">
+        <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
+        <div class="t"><b>Records screen</b><span>Screen no. HS-RS-SAMPLE · Nov 10, 2026</span></div>
+      </div>
+      <div class="ribbon"><b>Illustrative sample.</b> The lender, borrowers, yards and figures are invented to show the format.</div>
+
+      <div class="meta">
+        <div><small>Prepared for</small>Example State Bank, the ordering lender, for its own use</div>
+        <div><small>List received</small>Nov 5, 2026 · 3 livestock borrowers</div>
+        <div><small>Delivered</small>Nov 10, 2026, within 5 business days</div>
+        <div><small>Scope</small>Public and lender records only; no satellite count</div>
+      </div>
+
+      <div class="banner"><b>1 of 3 borrowers flagged; 1 needs a follow-up.</b>Details and next steps below.</div>
+
+      <div class="sec">
+        <h3>1 · Summary</h3>
+        <table class="tbl">
+          <thead><tr><th>Borrower</th><th>Yard</th><th>Claimed head</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>Prairie Example Feeders, LLC</td><td>Example Yard, Finney County, KS</td><td>9,500</td><td><span class="res flag">Flag</span>: claim above the yard's permitted capacity</td></tr>
+            <tr><td>Example Cattle Co., LLC</td><td>Example Feedyard, Castro County, TX</td><td>6,000</td><td><span class="res rev">Follow up</span>: another lender's UCC filing; one buyer notice over a year old</td></tr>
+            <tr><td>Sandhill Example Ranch</td><td>Example Feeders, Cherry County, NE</td><td>2,200</td><td><span class="res ok">Clear</span>: nothing that doesn't reconcile</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sec">
+        <h3>2 · Records: Prairie Example Feeders, LLC</h3>
+        <table class="tbl">
+          <thead><tr><th>Check</th><th>Finding</th><th>Source, date searched</th></tr></thead>
+          <tbody>
+            <tr><td>Permitted capacity</td><td>8,000 head. The claim of 9,500 is 19% above what the yard is permitted to hold</td><td>State feedlot permit (sample), Nov 6</td></tr>
+            <tr><td>Other liens</td><td>None naming this borrower's livestock</td><td>Secretary of State UCC search, Nov 6</td></tr>
+            <tr><td>Clear Title list</td><td>Not applicable: Kansas uses direct prenotification to buyers</td><td>USDA AMS</td></tr>
+            <tr><td>Buyer notices</td><td>Prenotices to all 4 listed buyers sent within 12 months. One buyer pays by ACH, which can't be made out jointly to the borrower and the bank</td><td>Bank's notice log, Nov 6</td></tr>
+            <tr><td>Packers &amp; Stockyards</td><td>Yard operator registered</td><td>USDA P&amp;S registrants, Nov 6</td></tr>
+            <tr><td>Court records</td><td>One open suit by a feed supplier against the borrower, filed Aug 2026</td><td>State district court portal and federal courts, Nov 6</td></tr>
+            <tr><td>Screwworm zones</td><td>None in or next to the yard's county</td><td>USDA APHIS notices, Nov 6</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:12px">The same table for every borrower is in the attached spreadsheet.</p>
+      </div>
+
+      <div class="sec">
+        <h3>3 · What this means and next steps</h3>
+        <p><b>Prairie Example Feeders.</b> The claim is more than the yard is allowed to hold, so some of the cattle may be at another yard, already shipped, or not there. Ask the yard for its inventory statement for the borrower's lots, or order a physical count; Herdstake quotes the count before it's ordered. Ask the borrower about the feed supplier's suit: in some states a supplier's lien can rank ahead of the bank's. Ask the ACH buyer to confirm how sale proceeds will reach the bank.</p>
+        <p><b>Example Cattle Co.</b> Confirm whether the other lender's UCC filing covers cattle at this yard, and renew the notice to the third listed buyer.</p>
+        <p><b>Sandhill Example Ranch.</b> No action.</p>
+      </div>
+
+      <div class="sec">
+        <h3>4 · How to order</h3>
+        <p>Send a list with one row per borrower: legal name, yard name, yard county and state, claimed head and the as-of date. Add your buyer list or notice log if you want the notice check. <a href="/records-screen-intake.csv" download>Download the list template</a>.</p>
+        <p>Your first two borrowers are free, then $195 each. Results within 5 business days of your list, with every line sourced and dated.</p>
+      </div>
+
+      <p class="fine">A monitoring report for the ordering lender's own use in business and agricultural lending. Not a guarantee, an appraisal, a title or legal opinion, or a consumer report, and no one else may rely on it. Herdstake reports what the records show and does not value the cattle.</p>
+    </article>
+  </div>
+</section>
+
+<section class="cta" style="padding-top:0">
+  <div class="wrap">
+    <h2>Screen two of your borrowers free.</h2>
+    <p class="lede">Records screen: $195 per borrower after your first two. Full checks with the satellite range: $495 per borrower from Q1 2027.</p>
+    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com?subject=Herdstake%20records%20screen">Screen two borrowers free →</a><a class="btn b-out" href="/#pricing">Pricing</a></div>
+    <p class="mail">team@herdstake.com</p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div>
+    <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
+    <div class="flinks"><a href="/#how">How it works</a><a href="/sample-report.html">Sample report</a><a href="/records-screen.html">Sample screen</a><a href="/#pricing">Pricing</a><a href="/feedyards.html">Feedyards</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+  </div>
+  <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
+</div></footer>
+<script src="/site.js" defer></script>
+</body>
+</html>

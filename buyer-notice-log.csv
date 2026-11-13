@@ -1,0 +1,2 @@
+borrower,borrower_county,state,buyer,buyer_type,buyer_address,date_sent,sent_by,date_received,proof_of_receipt,resend_by,amended_on,payment_terms,status,notes
+"Example Cattle Co., LLC",Finney,KS,"Example Sale Barn, Inc.",sale barn,"[address]",2026-01-15,certified mail,2026-01-19,return receipt on file,2026-12-19,,joint check,current,SAMPLE ROW - replace with your own

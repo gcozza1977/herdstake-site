@@ -107,6 +107,21 @@
   </div>
 </section>
 
+<section class="block" id="county-check">
+  <div class="wrap">
+    <span class="eyebrow">County checker</span>
+    <h2>Is your county in or next to a zone?</h2>
+    <p class="lede">Type a county and state, or paste a list, one per line (for example <code>Pecos, TX</code> or <code>North yard, Reeves County, TX</code>). Each line comes back as in, bordering, or neither. It runs in your browser: nothing you type is stored or sent.</p>
+    <div class="card" style="margin-top:24px">
+      <label for="cc-in" class="ct">COUNTIES OR YARDS (COUNTY, STATE)</label>
+      <textarea id="cc-in" rows="6" style="width:100%;font:15px/1.5 Inter,system-ui,sans-serif;padding:12px;border:1px solid var(--line);border-radius:12px;box-sizing:border-box" placeholder="Pecos, TX&#10;Deaf Smith, TX&#10;Finney, KS"></textarea>
+      <div class="ctas" style="margin-top:14px"><button type="button" class="btn sm b-dark" id="cc-go">Check counties</button></div>
+      <div id="cc-out" aria-live="polite" style="margin-top:18px"></div>
+      <p class="note" id="cc-asof">Texas zones: counties TAHC lists with an infested zone in part of the county, as of its Nov 14, 2026 notice. Detections: counties on USDA's confirmed-case list as compiled by GenomicEpi, data as of Nov 11, 2026 (Texas, New Mexico, Arizona). "Borders" means the county shares a boundary with one of those counties (US Census county adjacency). A Texas zone usually covers only part of a county: check the order and the <a href="https://www.tahc.texas.gov/emergency/nws.html">TAHC zone map</a> for the exact boundary. New Mexico and Arizona zones are on the maps linked from <a href="https://www.aphis.usda.gov/animals/animal-health/livestock-and-poultry-disease/stop-screwworm/current-status">USDA's current-status page</a>. Updated with this page each week.</p>
+    </div>
+  </div>
+</section>
+
 <section class="band" style="padding:96px 0">
   <div class="wrap">
     <span class="eyebrow">Free zone check</span>
@@ -140,6 +155,7 @@
   <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
 </div></footer>
 <script src="/site.js" defer></script>
+<script src="/county-check.js" defer></script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0ccb985b85af4c59944da9f5f4680464"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

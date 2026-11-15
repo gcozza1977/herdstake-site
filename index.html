@@ -191,7 +191,18 @@
   <div class="wrap reveal">
     <h2>Screen two borrowers free, <em>or just ask.</em></h2>
     <p class="lede">Lenders and feedyards: we answer within one business day.</p>
-    <div class="ctas"><a class="btn b-dark" href="mailto:team@herdstake.com">Email us →</a><a class="btn b-out" href="/sample-report.html">See a sample report</a></div>
+    <form class="lform" action="https://formsubmit.co/team@herdstake.com" method="POST">
+      <input type="hidden" name="_subject" value="Records screen request (herdstake.com)">
+      <input type="hidden" name="_next" value="https://herdstake.com/thanks.html">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="lrow"><label>Your name<input name="name" required autocomplete="name"></label><label>Lender or company<input name="lender" required autocomplete="organization"></label></div>
+      <div class="lrow"><label>Work email<input type="email" name="email" required autocomplete="email"></label><label>Livestock borrowers to screen<input type="number" name="borrowers" min="1" inputmode="numeric" placeholder="e.g. 2"></label></div>
+      <label>Anything we should know (optional)<textarea name="message" rows="3"></textarea></label>
+      <button class="btn b-dark" type="submit">Request my free screen →</button>
+      <p class="fine">We reply within one business day with how to send the borrower list. Send no borrower details in this form.</p>
+    </form>
+    <div class="ctas"><a class="btn b-out" href="mailto:team@herdstake.com?subject=Herdstake%20question">Or email us</a><a class="btn b-out" href="/sample-report.html">See a sample report</a></div>
     <p class="mail">team@herdstake.com</p>
   </div>
 </section>
@@ -205,5 +216,6 @@
 </div></footer>
 
 <script src="/site.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0ccb985b85af4c59944da9f5f4680464"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

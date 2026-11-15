@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cattle Buyer Check: is this buyer bonded with USDA? — Herdstake</title>
+<meta name="description" content="Free search of USDA's Packers and Stockyards bonded lists: dealers, order buyers, market agencies and packers, with bond amounts and list dates. Plus a deadline calculator for unpaid cattle sellers.">
+<meta property="og:title" content="Cattle Buyer Check — Herdstake">
+<meta property="og:description" content="Search USDA's bonded dealer, market agency and packer lists in one box. Free, nothing you type is stored.">
+<meta property="og:url" content="https://herdstake.com/buyer-check/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://herdstake.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://herdstake.com/buyer-check/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d0c'/><g fill='%23f3efe6'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23ff8a3d'/></svg>">
+<link rel="stylesheet" href="/site.css">
+<link rel="stylesheet" href="/pages.css">
+</head>
+<body class="light-top">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
+</defs></svg>
+
+<div class="nav" id="nav">
+  <div class="wrap bar">
+    <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
+    <nav class="links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#free">Free tools</a>
+      <a class="pill" href="/#contact">Talk to us</a>
+    </nav>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Main menu">
+      <a href="/#how">How it works</a>
+      <a href="/sample-report.html">Sample report</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#free">Free tools</a>
+      <a class="pill" href="/#contact">Talk to us</a>
+  </nav>
+</div>
+
+<section class="page-top">
+  <div class="wrap">
+    <span class="eyebrow">Cattle Buyer Check · free</span>
+    <h1>Is this cattle buyer bonded with USDA?</h1>
+    <p class="lede">USDA publishes who is registered and bonded under the Packers and Stockyards Act as separate spreadsheets. This page puts the dealer, market agency and packer lists in one search box. Nothing you type is stored or sent anywhere: the search runs in your browser.</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:16px">
+  <div class="wrap">
+    <label for="q" class="eyebrow">Business or DBA name, city or state</label>
+    <input id="q" type="search" autocomplete="off" placeholder="e.g. Livestock Auction, Amarillo, or KS" style="width:100%;max-width:640px;font:inherit;font-size:18px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;margin:8px 0 12px">
+    <p class="fineprint" id="meta">Loading USDA lists…</p>
+    <div id="out"></div>
+  </div>
+</section>
+
+<section class="block" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)" id="unpaid">
+  <div class="wrap">
+    <span class="eyebrow">Not paid for cattle?</span>
+    <h2>Mind the trust deadlines</h2>
+    <div class="prose">
+      <p>Packers and dealers must pay for livestock before the close of the next business day after the purchase and transfer of possession, unless the seller agreed in writing beforehand to other terms (7 U.S.C. § 228b). Cattle a packer or dealer buys in a cash sale, and the proceeds, are held in trust for unpaid cash sellers (7 U.S.C. § 196 for packers, § 217b for dealers).</p>
+      <p>The seller keeps the trust only by giving written notice to the buyer <b>and</b> filing it with USDA within <b>30 days after the final date for payment</b>, or within <b>15 business days after learning that a payment check or instrument was dishonored</b>. A cash sale is one where the seller did not expressly extend credit; credit sales are not covered. Packers averaging $500,000 or less in annual purchases, and dealers averaging $100,000 or less, are exempt.</p>
+    </div>
+    <div class="calc" style="display:grid;gap:10px;max-width:640px;margin:14px 0">
+      <label>Date the buyer took possession <input type="date" id="d1" style="font:inherit;padding:8px;margin-left:8px"></label>
+      <label>Or: date you learned a check bounced <input type="date" id="d2" style="font:inherit;padding:8px;margin-left:8px"></label>
+      <p id="calcout" style="font-weight:600"></p>
+    </div>
+    <p class="fineprint">Weekends are skipped when counting business days; federal holidays are not, so a deadline near a holiday may come a day or more later. Count conservatively and file early. General information, not legal advice: talk to a lawyer about your own sale. How to file: <a href="https://www.ams.usda.gov/sites/default/files/media/bondclaim.pdf">USDA AMS, how to file a bond claim (PDF)</a> and <a href="https://www.ams.usda.gov/rules-regulations/packers-and-stockyards-act">USDA's Packers and Stockyards Division</a>.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="eyebrow">About the data</span>
+    <div class="prose">
+      <p>Each result shows the name and DBA exactly as USDA lists them, city and state, the type of registrant, the active bond coverage and, for dealers, any clearor bond, with the list's own "current as of" date and a link to the file. We show no street addresses, phone numbers or emails. Lists are refreshed monthly.</p>
+      <p>A name missing from these lists doesn't mean anything is wrong: registration can be pending, or the business may be listed under another name. Ask the buyer for its USDA registration number and confirm with the Packers and Stockyards Division. USDA's national expired-registration file currently holds a single 2019 entry, so it is not included here. Corrections: <a href="mailto:team@herdstake.com">team@herdstake.com</a>.</p>
+    </div>
+    <ul class="srcs" id="srcs"><li><a href="https://www.ams.usda.gov/rules-regulations/packers-and-stockyards-act/regulated-entities">USDA AMS: regulated entities under the Packers and Stockyards Act</a></li><li><a href="https://www.law.cornell.edu/uscode/text/7/196">7 U.S.C. § 196 (packer trust)</a></li><li><a href="https://www.law.cornell.edu/uscode/text/7/217b">7 U.S.C. § 217b (dealer trust)</a></li><li><a href="https://www.law.cornell.edu/uscode/text/7/228b">7 U.S.C. § 228b (prompt payment)</a></li></ul>
+  </div>
+</section>
+
+<section class="cta block" style="padding-bottom:96px">
+  <div class="wrap">
+    <h2>Lenders: screen two borrowers free, <em>then $195 per borrower.</em></h2>
+    <p class="lede">A Herdstake records screen checks a borrower's claimed head against permits, other liens, buyer notices, Packers and Stockyards registration, court records and screwworm zones, with a source for every line.</p>
+    <div class="ctas"><a class="btn b-dark" href="/#contact">Request the free screen →</a><a class="btn b-out" href="/records-screen.html">See a sample screen</a></div>
+  </div>
+</section>
+
+<script>
+(function(){
+var q=document.getElementById('q'),out=document.getElementById('out'),meta=document.getElementById('meta'),D;
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function money(v){return typeof v==='number'?'$'+v.toLocaleString('en-US'):(v?esc(v):'—')}
+fetch('/buyer-check/data.json').then(function(r){return r.json()}).then(function(d){D=d;var L=d.lists;
+ meta.innerHTML=d.r.length.toLocaleString('en-US')+' USDA entries. Lists: '+Object.keys(L).map(function(k){return '<a href="'+L[k].url+'">'+esc(L[k].name)+'</a> (current as of '+esc(L[k].date)+')'}).join('; ')+'.';
+ run();}).catch(function(){meta.textContent='The USDA lists could not load. Try again, or use the links below.'});
+function run(){if(!D)return;var t=q.value.trim().toLowerCase();if(t.length<3){out.innerHTML='';return}
+ var w=t.split(/\s+/),hits=D.r.filter(function(e){var h=(e.n+' '+e.d+' '+e.c+' '+e.s).toLowerCase();return w.every(function(x){return h.indexOf(x)>-1})});
+ if(!hits.length){var dates=Object.keys(D.lists).map(function(k){return D.lists[k].date}).filter(function(v,i,a){return a.indexOf(v)===i}).join(' and ');
+  out.innerHTML='<p><b>Not found on USDA\'s lists dated '+esc(dates)+'.</b> Registration can be pending or under another name: ask the buyer for their registration number and confirm with USDA\'s Packers and Stockyards Division.</p>';return}
+ var rows=hits.slice(0,100).map(function(e){var L=D.lists[e.l];return '<tr><td><b>'+esc(e.n)+'</b>'+(e.d?'<br><span class="fineprint">DBA '+esc(e.d)+'</span>':'')+'</td><td>'+esc(e.c)+', '+esc(e.s)+'</td><td>'+esc(e.t)+'</td><td>'+money(e.b)+(e.k?'<br><span class="fineprint">Clearor '+money(e.k)+'</span>':'')+'</td><td><a href="'+L.url+'">'+esc(L.name)+'</a><br><span class="fineprint">as of '+esc(L.date)+'</span></td></tr>'}).join('');
+ out.innerHTML='<p class="fineprint">'+hits.length+' match'+(hits.length==1?'':'es')+(hits.length>100?', first 100 shown: add a city or state to narrow':'')+'.</p><div class="tblwrap"><table class="tbl"><thead><tr><th>Name as listed</th><th>City, state</th><th>Type</th><th>Bond coverage</th><th>USDA list</th></tr></thead><tbody>'+rows+'</tbody></table></div>';}
+q.addEventListener('input',run);
+function nbd(d,n){d=new Date(d);while(n>0){d.setDate(d.getDate()+1);var g=d.getDay();if(g&&g<6)n--}return d}
+function f(d){return d.toLocaleDateString('en-US',{weekday:'short',month:'long',day:'numeric',year:'numeric'})}
+function calc(){var a=document.getElementById('d1').value,b=document.getElementById('d2').value,o=[];
+ if(a){var p=new Date(a+'T12:00:00'),fd=nbd(p,1),dl=new Date(fd);dl.setDate(dl.getDate()+30);o.push('Payment was due by the close of '+f(fd)+'. If unpaid, file notice by '+f(dl)+' (30 days after the final date for payment).')}
+ if(b){var n=nbd(new Date(b+'T12:00:00'),15);o.push('Bounced check: file notice by '+f(n)+' (15 business days).')}
+ document.getElementById('calcout').innerHTML=o.map(esc).join('<br>')}
+document.getElementById('d1').addEventListener('change',calc);document.getElementById('d2').addEventListener('change',calc);
+})();
+</script>
+
+<footer><div class="wrap">
+  <div>
+    <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
+    <div class="flinks"><a href="/#how">How it works</a><a href="/sample-report.html">Sample report</a><a href="/records-screen.html">Sample screen</a><a href="/#pricing">Pricing</a><a href="/screwworm.html">Screwworm watch</a><a href="/cases/">Ghost cattle cases</a><a href="/buyer-notices.html">Buyer notices</a><a href="/buyer-check/">Buyer check</a><a href="/feedyards.html">Feedyards</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+  </div>
+  <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
+</div></footer>
+<script src="/site.js" defer></script>
+<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0ccb985b85af4c59944da9f5f4680464"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

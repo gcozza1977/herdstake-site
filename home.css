@@ -4,31 +4,24 @@
 .home h2 em{color:#6b706c}
 .eb{display:block;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#a8470f}
 
-/* light top bar: same nav markup as every other page, recoloured by the body class */
-.paper-top .nav{color:var(--ink)}
-.paper-top .nav.solid{background:rgba(250,248,243,.92);border-bottom-color:var(--line)}
-.paper-top .nav .links a{opacity:1;color:#3a3f3b}
-.paper-top .nav .links a:hover{color:var(--ink)}
-.paper-top .nav a.pill{background:var(--ink);color:var(--bone)}
-.paper-top .nav .menu{border-color:#cfc8b8;color:var(--ink)}
-.paper-top .nav.open .drawer{border-top-color:var(--line)}
-.paper-top .nav .drawer a{border-bottom-color:var(--line)}
+/* the standard dark top bar sits on the dark hero; a hairline marks its edge before scrolling */
+.home .nav{border-bottom-color:rgba(243,239,230,.12)}
 
-/* hero: the offer on the left, a sample records screen on the right */
-.fhero{padding:144px 0 88px;background:var(--paper)}
+/* hero: the offer on the left, a sample records screen on the right, on ink */
+.fhero{padding:144px 0 88px;background:var(--ink);color:var(--bone)}
 .fhero-in{display:flex;flex-wrap:wrap;align-items:center;gap:48px 56px}
 .fhero-copy{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
-.fchip{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid #d9d3c5;border-radius:999px;background:#fff;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;line-height:1.4;color:#3a3f3b}
+.fchip{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(243,239,230,.26);border-radius:999px;background:rgba(243,239,230,.06);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:11.5px;line-height:1.4;color:rgba(243,239,230,.84)}
 .fchip i{width:7px;height:7px;border-radius:50%;background:var(--sig);flex:none}
 .fhero h1{font-size:clamp(40px,5vw,68px);line-height:1.02;text-wrap:balance}
-.fhero h1 em{font-style:normal;color:#6b706c}
-.fhero .sub{font-size:18px;line-height:1.55;color:#3a3f3b;max-width:500px}
+.fhero h1 em{font-style:normal;color:rgba(243,239,230,.55)}
+.fhero .sub{font-size:18px;line-height:1.55;color:rgba(243,239,230,.84);max-width:500px}
 .fhero .ctas{margin-top:0}
 .home .btn{min-height:52px;padding:0 24px;font-family:inherit}
-.fhero .b-out{border-color:#d9d3c5}
-.fnote{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px;color:#5a5f5b}
+.fhero .b-line{border-color:rgba(243,239,230,.5)}
+.fnote{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12.5px;color:rgba(243,239,230,.7)}
 
-.doc{flex:1.4 1 480px;min-width:0;display:flex;flex-direction:column;gap:18px;padding:28px;background:#fff;border:1px solid #e0dacd;border-radius:14px;box-shadow:0 24px 60px -28px rgba(11,13,12,.28),0 2px 6px rgba(11,13,12,.05);scroll-margin-top:96px}
+.doc{flex:1.4 1 480px;min-width:0;display:flex;flex-direction:column;gap:18px;padding:28px;background:#fff;color:var(--ink);border:1px solid #e0dacd;border-radius:14px;box-shadow:0 30px 80px -30px rgba(0,0,0,.75),0 2px 6px rgba(0,0,0,.25);scroll-margin-top:96px}
 .doc-h{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
 .doc-h b{font-family:"Inter Tight",Inter,sans-serif;font-weight:600;font-size:22px;letter-spacing:-.02em;line-height:1.2}
 .doc-h span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:12px;color:#5a5f5b}
@@ -56,7 +49,7 @@
 .doc-more{align-self:flex-start;font-size:13.5px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
 
 /* the gap: both cases at one scale, 100 head a square */
-.ledger{background:var(--ink);color:var(--bone)}
+.ledger{background:var(--ink2);color:var(--bone);border-top:1px solid rgba(243,239,230,.14)}
 .ledger .eb{color:var(--sig)}
 .ledger h2{font-size:clamp(32px,3.6vw,50px);line-height:1.04;max-width:700px}
 .ledger h2 em{color:rgba(243,239,230,.55)}

@@ -1,4 +1,4 @@
-:root{--ink:#14202e;--ink2:#1a2b3d;--deep:#0f1822;--bone:#f1eee6;--paper:#f6f4ee;--muted:#5a6673;--line:#dad6ca;--sig:#e0916d;--sigd:#9a4426;--cu:#b5532f;--ok:#2f8a5f}
+:root{--ink:#14202e;--ink2:#1a2b3d;--deep:#0f1822;--bone:#f1eee6;--paper:#f6f4ee;--muted:#5a6673;--line:#dad6ca;--sig:#e0916d;--sigd:#9a4426;--cu:#b5532f;--ok:#277a53}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -133,13 +133,13 @@ h2 em,h1 em,h3 em{font-style:normal;color:inherit}
 
 /* report bits used by the sample report */
 .rbox{background:var(--paper);border-radius:12px;padding:14px 16px}
-.rbox small{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block}
+.rbox small{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block}
 .rbox b{display:block;font-family:"Inter Tight",sans-serif;font-size:26px;font-weight:600;letter-spacing:-.02em;margin-top:4px;line-height:1.15}
 .rbox i{display:block;font-style:normal;font-size:12px;line-height:1.4;margin-top:4px;color:var(--muted)}
 .rbox.alert{background:#fff1e8}.rbox.alert b{color:var(--sigd)}
 .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
 .tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
-.tbl th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--paper);font-weight:600}
+.tbl th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--paper);font-weight:600}
 .tbl tr:last-child td{border-bottom:0}
 
 /* page head for inner pages */
@@ -161,8 +161,8 @@ footer{background:var(--deep);color:#aab5c1;padding:48px 0 40px;font-size:14px}
 footer .wrap{display:flex;flex-direction:column;gap:28px}
 footer .logo{color:var(--bone)}
 footer p{max-width:none;font-size:13px;line-height:1.55}
-footer .flinks{display:flex;gap:12px 26px;flex-wrap:wrap;margin-top:18px}
-footer .flinks a{color:#d4dce4}footer .flinks a:hover{text-decoration:underline;text-underline-offset:4px}
+footer .flinks{display:flex;gap:2px 26px;flex-wrap:wrap;margin-top:14px}
+footer .flinks a{color:#d4dce4;display:inline-flex;align-items:center;min-height:36px}footer .flinks a:hover{text-decoration:underline;text-underline-offset:4px}
 
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -212,3 +212,16 @@ footer .flinks a{color:#d4dce4}footer .flinks a:hover{text-decoration:underline;
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
 
 .lform{max-width:640px;margin:28px auto 22px;text-align:left;display:grid;gap:14px}.lform .lrow{display:grid;grid-template-columns:1fr 1fr;gap:14px}.lform label{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--ink)}.lform input,.lform textarea{font:inherit;font-weight:400;font-size:15px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}.lform input:focus,.lform textarea:focus{outline:2px solid var(--sig);outline-offset:1px}.lform button{justify-self:center;border:0;cursor:pointer}.lform .fine{font-size:12.5px;color:var(--muted);text-align:center;margin:0}.lform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}@media(max-width:640px){.lform .lrow{grid-template-columns:1fr}}
+
+/* stacked tables on phones */
+@media(max-width:640px){
+ table.tbl.stk{display:block;overflow:visible;border:0;background:none;min-width:0!important;border-radius:0}
+ table.tbl.stk thead{display:none}
+ table.tbl.stk tbody{display:block}
+ table.tbl.stk tr{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;margin:0 0 12px;padding:6px 0}
+ table.tbl.stk td{display:block;min-width:0;border:0;padding:7px 16px}
+ table.tbl.stk td::before{content:attr(data-label);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+ table.tbl.stk td:first-child{font-weight:600;font-size:16px}
+ table.tbl.stk td:first-child::before{display:none}
+}
+.sec h3{line-height:1.3}

@@ -26,7 +26,7 @@
 .meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border-bottom:1px solid var(--line)}
 .meta div{padding:13px 36px;border-bottom:1px solid var(--line);font-size:14px}
 .meta div:nth-child(odd){border-right:1px solid var(--line)}
-.meta small{display:block;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.meta small{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .banner{margin:26px 36px 0;padding:18px 20px;border-radius:12px;background:#fff1e8;border:1px solid #ffd2b5;color:#8a3a0c;font-size:15.5px}
 .banner b{font-family:"Inter Tight",sans-serif;font-size:18px;letter-spacing:-.015em;display:block;color:var(--sigd);margin-bottom:2px}
 .sec{padding:26px 36px 4px}
@@ -40,7 +40,7 @@
 .exam li{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14.5px;color:#3c403d}
 .exam li::before{content:"✓";color:var(--ok);font-weight:700}
 .sig{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:26px 36px 0;padding:18px 0;border-top:1px dashed #cfc9bc;font-size:14px}
-.sig .line{min-width:260px;border-bottom:1px solid var(--ink);height:28px;margin-bottom:6px;font-family:"Inter Tight",sans-serif;font-style:italic;color:#9a9e99}
+.sig .line{min-width:260px;border-bottom:1px solid var(--ink);height:28px;margin-bottom:6px;font-family:"Inter Tight",sans-serif;font-style:italic;color:#6b706b}
 .fine{padding:20px 36px 30px;font-size:12px;color:var(--muted)}
 .res{font-weight:600}.res.flag{color:var(--sigd)}.res.rev{color:#8a6400}.res.ok{color:var(--ok)}
 .tools{max-width:900px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
@@ -76,7 +76,7 @@
 <section style="padding-top:128px;padding-bottom:72px">
   <div class="wrap">
     <div class="tools">
-      <div><span class="eyebrow">Sample records screen</span><h2 style="font-size:clamp(28px,3.4vw,40px);margin:10px 0 0">What $195 per borrower gets you.</h2></div>
+      <div><span class="eyebrow">Sample records screen</span><h1 style="font-size:clamp(28px,3.4vw,40px);margin:10px 0 0">What $195 per borrower gets you.</h1></div>
       <a class="btn b-dark sm" href="/records-screen-intake.csv" download>Download the list template</a>
     </div>
 
@@ -98,28 +98,28 @@
 
       <div class="sec">
         <h3>1 · Summary</h3>
-        <table class="tbl">
+        <table class="tbl stk">
           <thead><tr><th>Borrower</th><th>Yard</th><th>Claimed head</th><th>Result</th></tr></thead>
           <tbody>
-            <tr><td>Prairie Example Feeders, LLC</td><td>Example Yard, Finney County, KS</td><td>9,500</td><td><span class="res flag">Flag</span>: claim above the yard's permitted capacity</td></tr>
-            <tr><td>Example Cattle Co., LLC</td><td>Example Feedyard, Castro County, TX</td><td>6,000</td><td><span class="res rev">Follow up</span>: another lender's UCC filing; one buyer notice over a year old</td></tr>
-            <tr><td>Sandhill Example Ranch</td><td>Example Feeders, Cherry County, NE</td><td>2,200</td><td><span class="res ok">Clear</span>: nothing that doesn't reconcile</td></tr>
+            <tr><td data-label="Borrower">Prairie Example Feeders, LLC</td><td data-label="Yard">Example Yard, Finney County, KS</td><td data-label="Claimed head">9,500</td><td data-label="Result"><span class="res flag">Flag</span>: claim above the yard's permitted capacity</td></tr>
+            <tr><td data-label="Borrower">Example Cattle Co., LLC</td><td data-label="Yard">Example Feedyard, Castro County, TX</td><td data-label="Claimed head">6,000</td><td data-label="Result"><span class="res rev">Follow up</span>: another lender's UCC filing; one buyer notice over a year old</td></tr>
+            <tr><td data-label="Borrower">Sandhill Example Ranch</td><td data-label="Yard">Example Feeders, Cherry County, NE</td><td data-label="Claimed head">2,200</td><td data-label="Result"><span class="res ok">Clear</span>: nothing that doesn't reconcile</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="sec">
         <h3>2 · Records: Prairie Example Feeders, LLC</h3>
-        <table class="tbl">
+        <table class="tbl stk">
           <thead><tr><th>Check</th><th>Finding</th><th>Source, date searched</th></tr></thead>
           <tbody>
-            <tr><td>Permitted capacity</td><td>8,000 head. The claim of 9,500 is 19% above what the yard is permitted to hold</td><td>State feedlot permit (sample), Nov 6</td></tr>
-            <tr><td>Other liens</td><td>None naming this borrower's livestock</td><td>Secretary of State UCC search, Nov 6</td></tr>
-            <tr><td>Clear Title list</td><td>Not applicable: Kansas uses direct prenotification to buyers</td><td>USDA AMS</td></tr>
-            <tr><td>Buyer notices</td><td>Prenotices to all 4 listed buyers sent within 12 months. One buyer pays by ACH, which can't be made out jointly to the borrower and the bank</td><td>Bank's notice log, Nov 6</td></tr>
-            <tr><td>Packers &amp; Stockyards</td><td>Yard operator registered</td><td>USDA P&amp;S registrants, Nov 6</td></tr>
-            <tr><td>Court records</td><td>One open suit by a feed supplier against the borrower, filed Aug 2026</td><td>State district court portal and federal courts, Nov 6</td></tr>
-            <tr><td>Screwworm zones</td><td>None in or next to the yard's county</td><td>USDA APHIS notices, Nov 6</td></tr>
+            <tr><td data-label="Check">Permitted capacity</td><td data-label="Finding">8,000 head. The claim of 9,500 is 19% above what the yard is permitted to hold</td><td data-label="Source, date searched">State feedlot permit (sample), Nov 6</td></tr>
+            <tr><td data-label="Check">Other liens</td><td data-label="Finding">None naming this borrower's livestock</td><td data-label="Source, date searched">Secretary of State UCC search, Nov 6</td></tr>
+            <tr><td data-label="Check">Clear Title list</td><td data-label="Finding">Not applicable: Kansas uses direct prenotification to buyers</td><td data-label="Source, date searched">USDA AMS</td></tr>
+            <tr><td data-label="Check">Buyer notices</td><td data-label="Finding">Prenotices to all 4 listed buyers sent within 12 months. One buyer pays by ACH, which can't be made out jointly to the borrower and the bank</td><td data-label="Source, date searched">Bank's notice log, Nov 6</td></tr>
+            <tr><td data-label="Check">Packers &amp; Stockyards</td><td data-label="Finding">Yard operator registered</td><td data-label="Source, date searched">USDA P&amp;S registrants, Nov 6</td></tr>
+            <tr><td data-label="Check">Court records</td><td data-label="Finding">One open suit by a feed supplier against the borrower, filed Aug 2026</td><td data-label="Source, date searched">State district court portal and federal courts, Nov 6</td></tr>
+            <tr><td data-label="Check">Screwworm zones</td><td data-label="Finding">None in or next to the yard's county</td><td data-label="Source, date searched">USDA APHIS notices, Nov 6</td></tr>
           </tbody>
         </table>
         <p style="margin-top:12px">The same table for every borrower is in the attached spreadsheet.</p>

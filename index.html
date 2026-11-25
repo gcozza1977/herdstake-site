@@ -13,151 +13,82 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://herdstake.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b0d0c'/><g fill='%23f3efe6'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23ff8a3d'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2314202e'/><g fill='%23f6f4ee'><rect x='7' y='7' width='5' height='5' rx='1'/><rect x='13.5' y='7' width='5' height='5' rx='1'/><rect x='20' y='7' width='5' height='5' rx='1'/><rect x='7' y='13.5' width='5' height='5' rx='1'/><rect x='20' y='13.5' width='5' height='5' rx='1'/><rect x='7' y='20' width='5' height='5' rx='1'/><rect x='13.5' y='20' width='5' height='5' rx='1'/><rect x='20' y='20' width='5' height='5' rx='1'/></g><rect x='13.5' y='13.5' width='5' height='5' rx='1' fill='%23c96a42'/></svg>">
 <link rel="stylesheet" href="/site.css">
 <link rel="stylesheet" href="/home.css">
-<style>
-.hero-link{color:rgba(243,239,230,.86);text-decoration:underline;text-underline-offset:4px;font-size:15px;margin-top:-8px}
-.hero-link:hover{color:var(--bone)}
-.pcard1{margin-top:32px;border:1px solid var(--line);border-radius:14px;background:#fff;padding:32px;display:flex;flex-direction:column;gap:20px}
-.pcard1 .pc-amt{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.pcard1 .pc-amt b{font:600 56px/1 "Inter Tight",sans-serif;letter-spacing:-.04em}
-.pcard1 .pc-amt span{font-size:17px;color:#3a3f3b}
-.pcard1 p{color:#3a3f3b}
-.pcard1 .btn{align-self:flex-start}
-.pcard1 .pc-coming{font-size:14px;color:#6b706c;border-top:1px solid var(--line);padding-top:16px}
-.pcard1 .pc-coming span{display:inline-block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:2px 9px;margin-right:10px;color:#a8470f}
-</style>
 </head>
 <body class="home">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#ff8a3d"/></symbol>
-<pattern id="pen-full" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="9" height="9" rx="1.5" fill="#ff8a3d"/></pattern>
-<pattern id="pen-ghost" width="12" height="12" patternUnits="userSpaceOnUse"><rect x=".5" y=".5" width="8" height="8" rx="1.5" fill="none" stroke="#f3efe6" stroke-width="1" opacity=".5"/></pattern>
+<symbol id="mark" viewBox="0 0 26 26"><g fill="currentColor"><rect x="0" y="0" width="7" height="7" rx="1.6"/><rect x="9.5" y="0" width="7" height="7" rx="1.6"/><rect x="19" y="0" width="7" height="7" rx="1.6"/><rect x="0" y="9.5" width="7" height="7" rx="1.6"/><rect x="19" y="9.5" width="7" height="7" rx="1.6"/><rect x="0" y="19" width="7" height="7" rx="1.6"/><rect x="9.5" y="19" width="7" height="7" rx="1.6"/><rect x="19" y="19" width="7" height="7" rx="1.6"/></g><rect x="9.5" y="9.5" width="7" height="7" rx="1.6" fill="#c96a42"/></symbol>
 </defs></svg>
 
 <div class="nav" id="nav">
   <div class="wrap bar">
     <a class="logo" href="/"><svg><use href="#mark"/></svg>herdstake</a>
     <nav class="links" aria-label="Main">
-      <a href="/#how">How it works</a>
+      <a href="/#checks">What we check</a>
       <a href="/sample-report.html">Sample report</a>
       <a href="/#pricing">Pricing</a>
-      <a href="/#free">Free tools</a> <a class="pill" href="/#contact">Talk to us</a>
+      <a href="/#free">Free tools</a> <a class="pill" href="/#contact">Screen two borrowers free</a>
     </nav>
     <button class="menu" type="button" aria-expanded="false" aria-controls="drawer">Menu</button>
   </div>
   <nav class="drawer" id="drawer" aria-label="Main menu">
-    <a href="/#how">How it works</a>
+    <a href="/#checks">What we check</a>
     <a href="/sample-report.html">Sample report</a>
     <a href="/#pricing">Pricing</a>
-    <a href="/#free">Free tools</a> <a class="pill" href="/#contact">Talk to us</a>
+    <a href="/#free">Free tools</a> <a class="pill" href="/#contact">Screen two borrowers free</a>
   </nav>
 </div>
 
-<header class="fhero">
-  <div class="wrap fhero-in">
-    <div class="fhero-copy">
-      <span class="fchip"><i></i>Records screens available now · Texas, Kansas, Nebraska</span>
-      <h1>One dated evidence file <em>per borrower.</em></h1>
-      <p class="sub">We check each borrower's claimed cattle against the yard's permit, the lien record and your buyer notices, and flag what doesn't reconcile. You get the file within 5 business days of your list.</p>
-      <div class="ctas"><a class="btn b-light" href="#pricing">Screen two borrowers free →</a></div>
-      <a class="hero-link" href="#checks">What we check &rarr;</a>
-      <p class="fnote">First two borrowers free, then $195 each.</p>
-    </div>
-    <div class="doc" id="sample">
-      <div class="doc-h"><b>Records screen</b><span>Screen no. HS-RS-SAMPLE · Nov 10, 2026</span></div>
-      <p class="doc-note">Illustrative sample. The lender, borrowers, yards and figures are invented to show the format.</p>
-      <dl class="doc-meta">
-        <div><dt>Prepared for</dt><dd>Example State Bank, the ordering lender</dd></div>
-        <div><dt>List received</dt><dd>Nov 5, 2026 · 3 livestock borrowers</dd></div>
-        <div><dt>Delivered</dt><dd>Nov 10, 2026, within 5 business days</dd></div>
-        <div><dt>Scope</dt><dd>Public and lender records only</dd></div>
-      </dl>
-      <p class="doc-flag"><i></i>1 of 3 borrowers flagged; 1 needs a follow-up.</p>
-      <table class="doc-t">
-        <thead><tr><th scope="col">Borrower and yard</th><th scope="col" class="n">Claimed head</th><th scope="col">Result</th></tr></thead>
-        <tbody>
-          <tr><td><b>Prairie Example Feeders, LLC</b><span>Example Yard, Finney County, KS</span></td><td class="n">9,500</td><td><span class="tag flag">Flag</span><span class="why">Claim above the yard's permitted capacity</span></td></tr>
-          <tr><td><b>Example Cattle Co., LLC</b><span>Example Feedyard, Castro County, TX</span></td><td class="n">6,000</td><td><span class="tag follow">Follow up</span><span class="why">Another lender's UCC filing; one buyer notice over a year old</span></td></tr>
-          <tr><td><b>Sandhill Example Ranch</b><span>Example Feeders, Cherry County, NE</span></td><td class="n">2,200</td><td><span class="tag clear">Clear</span><span class="why">Nothing that doesn't reconcile</span></td></tr>
-        </tbody>
-      </table>
-      <a class="doc-more" href="/records-screen.html">See the full sample screen →</a>
-    </div>
+<header class="hero2">
+  <img class="bgimg" src="/img/hero-feedlot.webp" width="1672" height="941" alt="Cattle at the bunk in a working feedyard, grain bins and sheds behind" fetchpriority="high">
+  <div class="shade"></div>
+  <div class="wrap">
+    <h1>Independent records review for cattle collateral.</h1>
+    <p class="sub">Claimed head checked against yard permits, lien filings and buyer notices. A dated, sourced file in five business days.</p>
+    <div class="ctas"><a class="btn b-light" href="#contact">Screen two borrowers free →</a><a class="alt" href="/sample-report.html">See a sample report</a></div>
   </div>
 </header>
 
-<section class="ledger" id="cases">
-  <div class="wrap">
-    <div class="ledger-top reveal">
-      <div>
-        <span class="eb">Why it matters</span>
-        <h2>The biggest cattle frauds <em>lived between site visits.</em></h2>
-      </div>
-      <ul class="key">
-        <li><i class="full"></i>100 head found</li>
-        <li><i class="ghost"></i>100 head on paper only</li>
-      </ul>
+<section class="why" id="why">
+  <div class="wrap cols">
+    <div class="lead">
+      <h2>The biggest cattle frauds lived between site visits.</h2>
+      <p>A records screen catches the paper side: a second lender’s lien, a lapsed buyer notice, a claim bigger than the yard’s permit. Seeing whether the pens are full takes a site count.</p>
+      <a class="link" href="/cases/">The full ghost cattle case file →</a>
     </div>
-    <div class="cases reveal">
-      <div class="case">
-        <div class="case-n">
-          <span class="case-t">AGRIDIME · THE RECEIVER'S COUNT</span>
-          <div class="pair"><div><b class="hollow">29,500</b><span>on paper</span></div><div><b class="solid">9,900</b><span>in the pens</span></div></div>
-        </div>
-        <div class="case-g">
-          <svg viewBox="0 0 717 57" role="img" aria-label="295 squares, each 100 head. 99 are filled for the 9,900 head the receiver found. 196 are empty for the 19,600 head that were only on paper.">
-            <rect x="0" y="0" width="717" height="12" fill="url(#pen-full)"/>
-            <rect x="0" y="12" width="468" height="12" fill="url(#pen-full)"/>
-            <rect x="468" y="12" width="249" height="12" fill="url(#pen-ghost)"/>
-            <rect x="0" y="24" width="717" height="24" fill="url(#pen-ghost)"/>
-            <rect x="0" y="48" width="660" height="9" fill="url(#pen-ghost)"/>
-          </svg>
-          <span class="case-s">Source: <a href="https://www.dtnpf.com/agriculture/web/ag/livestock/article/2024/05/14/cftc-alleges-texas-based-agridime">DTN</a></span>
-        </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="lab">Agridime · the receiver’s count</span>
+        <div class="pair"><div><b class="paper">29,500</b><span class="cap">on paper</span></div><div><b class="found">9,900</b><span class="cap">in the pens</span></div></div>
+        <div class="bar" role="img" aria-label="9,900 head found against 29,500 on paper, about one third"><i style="width:33.6%"></i></div>
+        <p class="src2">Source: <a href="https://www.dtnpf.com/agriculture/web/ag/livestock/article/2024/05/14/cftc-alleges-texas-based-agridime">DTN</a></p>
       </div>
-      <div class="case">
-        <div class="case-n">
-          <span class="case-t">7M CATTLE FEEDERS</span>
-          <div class="pair"><div><b class="hollow">89,522</b><span>pledged</span></div><div><b class="solid">10,575</b><span>found</span></div></div>
-        </div>
-        <div class="case-g">
-          <svg viewBox="0 0 717 177" role="img" aria-label="895 squares, each 100 head. 106 are filled for the 10,575 head found. 789 are empty for the rest of the 89,522 pledged.">
-            <rect x="0" y="0" width="717" height="12" fill="url(#pen-full)"/>
-            <rect x="0" y="12" width="552" height="12" fill="url(#pen-full)"/>
-            <rect x="552" y="12" width="165" height="12" fill="url(#pen-ghost)"/>
-            <rect x="0" y="24" width="717" height="144" fill="url(#pen-ghost)"/>
-            <rect x="0" y="168" width="660" height="9" fill="url(#pen-ghost)"/>
-          </svg>
-          <span class="case-s">Source: <a href="https://www.beefmagazine.com/news/texas-cattle-feeding-ponzi-scheme-exposed">Beef</a></span>
-        </div>
+      <div class="stat">
+        <span class="lab">7M Cattle Feeders</span>
+        <div class="pair"><div><b class="paper">89,522</b><span class="cap">pledged</span></div><div><b class="found">10,575</b><span class="cap">found</span></div></div>
+        <div class="bar" role="img" aria-label="10,575 head found against 89,522 pledged, about one eighth"><i style="width:11.8%"></i></div>
+        <p class="src2">Source: <a href="https://www.beefmagazine.com/news/texas-cattle-feeding-ponzi-scheme-exposed">Beef</a></p>
       </div>
     </div>
-    <div class="ledger-foot reveal">
-      <div class="lf-n"><b>11.4M</b><span>Head on feed in US feedlots of 1,000+ head, Oct 1, 2026. Checked mostly in person.</span></div>
-      <p>A records screen catches the paper side of collateral fraud: a second lender's lien, a lapsed buyer notice, a claim bigger than the yard's permit. Seeing whether the pens are actually full takes a site count.</p>
-    </div>
-    <p class="src">Sources: <a href="https://www.dtnpf.com/agriculture/web/ag/livestock/article/2024/05/14/cftc-alleges-texas-based-agridime">DTN</a> · <a href="https://www.beefmagazine.com/news/texas-cattle-feeding-ponzi-scheme-exposed">Beef</a> · <a href="https://www.dtnpf.com/agriculture/web/ag/livestock/article/2026/10/26/cattle-feed-report-placements-hit">USDA Cattle on Feed via DTN</a> · <a href="/cases/">The full ghost cattle case file</a></p>
   </div>
 </section>
 
-<section class="chk" id="checks">
-  <div class="wrap chk-in">
-    <div class="chk-copy reveal">
-      <span class="eb">What you get</span>
-      <h2>Seven checks. <em>Every line sourced.</em></h2>
-      <p>Each finding shows where we looked and when, on the face of the report. Anything that doesn't reconcile comes with a next step.</p>
-      <a class="more" href="/sample-report.html">See a sample report →</a>
+<section class="checks7" id="checks">
+  <div class="wrap cols">
+    <div class="intro">
+      <h2>Seven checks. Source and date on every finding.</h2>
+      <a class="link" href="/sample-report.html">See a sample report →</a>
     </div>
-    <div class="chk-tbl reveal">
+    <div class="chk-tbl">
       <table>
         <thead><tr><th scope="col">Check</th><th scope="col">What it answers</th><th scope="col">Where we look</th></tr></thead>
         <tbody>
-          <tr><th scope="row">Permitted capacity</th><td>Claim above the yard's permit?</td><td>State feedlot permit</td></tr>
-          <tr><th scope="row">Other liens</th><td>Any other lender's lien?</td><td>Secretary of State UCC search</td></tr>
+          <tr><th scope="row">Permitted capacity</th><td>Claim above the yard’s permit?</td><td>State feedlot permit</td></tr>
+          <tr><th scope="row">Other liens</th><td>Any other lender’s lien?</td><td>Secretary of State UCC search</td></tr>
           <tr><th scope="row">Clear Title list</th><td>Central filing or direct notice?</td><td>USDA AMS</td></tr>
           <tr><th scope="row">Buyer notices</th><td>Are your buyer notices current?</td><td>Your notice log</td></tr>
           <tr><th scope="row">Packers &amp; Stockyards</th><td>Is the yard operator registered?</td><td>USDA P&amp;S registrants</td></tr>
@@ -169,86 +100,92 @@
   </div>
 </section>
 
-<section class="how" id="how">
+<section class="finding" id="finding">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eb">How it works</span>
-      <h2>A list in. <em>A sourced report out.</em></h2>
+    <h2>One finding. Source, date and next step.</h2>
+    <span class="chipx">Illustrative example · fictional borrower and yard</span>
+    <div class="fstrip">
+      <div class="fcell"><span class="lab">Question</span><b>Claim above permit?</b><span class="s">Claimed head against the yard’s permitted capacity</span></div>
+      <div class="fcell"><span class="lab">Source</span><b>State feedlot permit</b><span class="s">Finney County, KS</span></div>
+      <div class="fcell"><span class="lab">Checked</span><b>Nov 10, 2026</b><span class="s">Source date printed in the file</span></div>
+      <div class="fcell"><span class="lab">Next step</span><b>Confirm yard / inventory detail</b><span class="s">A flag is a prompt for review, not an accusation</span></div>
     </div>
-    <div class="steps3 reveal">
-      <div class="step"><span class="k">01</span><h3>You send a list</h3><p>Borrower, yard and claimed head. Nothing touches your systems.</p></div>
-      <div class="step"><span class="k">02</span><h3>We check each yard</h3><p>Permits, lien filings, buyer notices, yard registration and court records.</p></div>
-      <div class="step"><span class="k">03</span><h3>You get the report</h3><p>Anything that doesn't reconcile gets a next step. If a physical count is warranted, we confirm local availability, timing and cost first.</p></div>
+    <a class="link" href="/records-screen.html">See the full sample screen →</a>
+  </div>
+</section>
+
+<section class="scope" id="scope">
+  <div class="wrap cols">
+    <figure><img src="/img/pens-handler.webp" width="1448" height="1086" loading="lazy" alt="A feedyard worker walks the alley beside a feed bunk lined with cattle"></figure>
+    <div class="txt">
+      <h2>What a records screen can and can’t tell you.</h2>
+      <p>It can flag records for follow-up. It cannot confirm cattle are physically present.</p>
+      <div class="incl">
+        <div class="yes"><b>Included</b><ul><li>Claimed head against yard permits</li><li>Public lien filings and buyer notices</li><li>Source, date and next step</li></ul></div>
+        <div class="no"><b>Not established</b><ul><li>Physical count or cattle in the pens</li><li>Ownership, title, value or lien priority</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <h2>A list in. A sourced report out.</h2>
+    <div class="step3">
+      <div><h3>You send a list</h3><p>Borrower, yard and claimed head. Nothing touches your systems.</p></div>
+      <div><h3>We check each yard</h3><p>Permits, lien filings, buyer notices, yard registration and court records. A person reviews every finding before it goes out.</p></div>
+      <div><h3>You get the report</h3><p>Anything that doesn’t reconcile gets a next step.</p></div>
     </div>
   </div>
 </section>
 
 <section class="pband" id="pricing">
- <div class="wrap">
-  <div class="reveal" style="max-width:560px">
-   <span class="eb">Pricing</span>
-   <h2>One price. <em>First two free.</em></h2>
-   <div class="pcard1">
-    <div class="pc-amt"><b>$195</b><span>per borrower, first two free</span></div>
-    <p>A dated records screen for each livestock borrower, within 5 business days of your list. Every line sourced: where we looked, and when. You order and pay, which keeps the screen independent of the borrower.</p>
-    <a class="btn b-dark" href="#contact">Screen two borrowers free &rarr;</a>
-    <p class="pc-coming"><span>Coming</span>A head-count range from a dated satellite image is planned for Q1 2027.</p>
-   </div>
+  <div class="wrap cols">
+    <h2>Two screens free. $195 per borrower after.</h2>
+    <div class="pr">
+      <p>A dated records screen for each livestock borrower, within 5 business days of your list. You order and pay, which keeps the screen independent of the borrower.</p>
+      <a class="btn b-cu" href="#contact">Screen two borrowers free →</a>
+    </div>
   </div>
- </div>
 </section>
 
-<section class="exam2">
+<section class="free" id="free">
   <div class="wrap">
-    <div class="reveal">
-      <span class="eb">Built for your examiners</span>
-      <h2>Evidence your file <em>can stand on.</em></h2>
-    </div>
-    <div class="exam-cols reveal">
-      <div><span class="k">INDEPENDENT</span><h3>Not the borrower's word</h3><p>Borrower and yard records are checked against permits and public filings, never taken as the answer.</p></div>
-      <div><span class="k">DOCUMENTED</span><h3>Dated, with sources</h3><p>The filing behind every finding, with where and when we looked, on the face of the report.</p></div>
-      <div><span class="k">CHECKED</span><h3>Reviewed by a person</h3><p>Every finding is checked by our team before it goes out.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="tools" id="free">
-  <div class="wrap tools-in">
-    <div class="tools-copy reveal">
-      <span class="eb">Free for lenders</span>
-      <h2>Useful today, <em>no order needed.</em></h2>
-    </div>
-    <div class="tool-list reveal">
-      <a href="/screwworm.html"><span class="tk">SCREWWORM WATCH</span><b>Which of your borrowers sit near a zone?</b><span class="tg">Open the watch →</span></a>
-      <a href="/cases/"><span class="tk">GHOST CATTLE CASE FILE</span><b>What was claimed, and what was there.</b><span class="tg">Read the cases →</span></a>
-      <a href="/buyer-check/"><span class="tk">CATTLE BUYER CHECK</span><b>Is this buyer bonded with USDA?</b><span class="tg">Check a buyer →</span></a>
-      <a href="/buyer-notices.html"><span class="tk">BUYER-NOTICE KIT</span><b>Keep your lien on cattle that sell.</b><span class="tg">Get the kit →</span></a>
-      <a href="/lien-rules/"><span class="tk">LIEN RULES BY STATE</span><b>What does a buyer have to do here?</b><span class="tg">See the rules →</span></a>
-      <a href="/yards/"><span class="tk">FEEDYARD DIRECTORY</span><b>Which yards hold a permit, and for how many head?</b><span class="tg">Browse the yards →</span></a>
+    <h2>Free for lenders.</h2>
+    <div class="tgrid">
+      <a href="/screwworm.html"><span class="tk">Screwworm watch</span><b>Which of your borrowers sit near a zone?</b><span class="tg">Open the watch →</span></a>
+      <a href="/cases/"><span class="tk">Ghost cattle case file</span><b>What was claimed, and what was there.</b><span class="tg">Read the cases →</span></a>
+      <a href="/buyer-check/"><span class="tk">Cattle buyer check</span><b>Is this buyer bonded with USDA?</b><span class="tg">Check a buyer →</span></a>
+      <a href="/buyer-notices.html"><span class="tk">Buyer-notice kit</span><b>Keep your lien on cattle that sell.</b><span class="tg">Get the kit →</span></a>
+      <a href="/lien-rules/"><span class="tk">Lien rules by state</span><b>What does a buyer have to do here?</b><span class="tg">See the rules →</span></a>
+      <a href="/yards/"><span class="tk">Feedyard directory</span><b>Which yards hold a permit, and for how many head?</b><span class="tg">Browse the yards →</span></a>
     </div>
   </div>
 </section>
 
 <section class="faqs" id="faq">
-  <div class="wrap">
-    <div class="reveal"><span class="eb">Questions</span><h2>What lenders ask first.</h2></div>
-    <div class="faq reveal">
-<details><summary>Does this replace our site visits?</summary><p>No. It's a documented check between visits that tells you which borrowers deserve the next visit first.</p></details>
+  <div class="wrap cols">
+    <div><h2>What lenders ask first.</h2></div>
+    <div class="faq">
+<details><summary>Does this replace our site visits?</summary><p>No. It’s a documented check between visits that tells you which borrowers deserve the next visit first.</p></details>
 <details><summary>What do you need from us, and who sees the reports?</summary><p>A short list: borrower, yard and claimed head, plus any yard inventory statements you already receive. No system access and no credit files. Reports go only to you, never to another lender or the yard.</p></details>
 <details><summary>Can satellites really count cattle in a packed pen?</summary><p>Not yet offered; it is planned for Q1 2027. A satellite image cannot count head by head with perfect accuracy, so when it launches every count will be a range with the image date, and a claim above the range will get a closer look and, where warranted, a physical count, not an accusation.</p></details>
-<details><summary>Is this a guarantee or an appraisal?</summary><p>Neither. It's a monitoring report: we report head and location, and you apply your own price.</p></details>
-</div>
+<details><summary>Is this a guarantee or an appraisal?</summary><p>Neither. It’s a monitoring report: we report head and location, and you apply your own price.</p></details>
+    </div>
   </div>
 </section>
 
 <section class="ask" id="contact">
-  <div class="wrap ask-in">
-    <div class="ask-copy reveal">
-      <h2>Screen two borrowers free, <em>or just ask.</em></h2>
-      <p class="lede">Lenders and feedyards: we answer within one business day.</p>
+  <img class="bgimg" src="/img/pasture-barn.webp" width="1672" height="941" loading="lazy" alt="A working cattle operation: red barn, grain bins and cattle on pasture">
+  <div class="shade"></div>
+  <div class="wrap cols">
+    <div class="ask-copy">
+      <h2>Screen two borrowers free, or just ask.</h2>
+      <p>Lenders and feedyards: we answer within one business day.</p>
       <a class="ask-mail" href="mailto:team@herdstake.com?subject=Herdstake%20question">team@herdstake.com</a>
+      <p class="avail">Records screens available now: Texas, Kansas, Nebraska.</p>
     </div>
-    <form class="aform reveal" action="https://formsubmit.co/team@herdstake.com" method="POST">
+    <form class="aform" action="https://formsubmit.co/team@herdstake.com" method="POST">
       <input type="hidden" name="_subject" value="Records screen request (herdstake.com)">
       <input type="hidden" name="_next" value="https://herdstake.com/thanks.html">
       <input type="hidden" name="_template" value="table">
@@ -256,7 +193,7 @@
       <div class="arow"><label>Your name<input name="name" required autocomplete="name"></label><label>Lender or company<input name="lender" required autocomplete="organization"></label></div>
       <div class="arow"><label>Work email<input type="email" name="email" required autocomplete="email"></label><label>Livestock borrowers to screen<input type="number" name="borrowers" min="1" inputmode="numeric" placeholder="e.g. 2"></label></div>
       <label>Anything we should know (optional)<textarea name="message" rows="3"></textarea></label>
-      <div class="asend"><button class="btn b-light" type="submit">Request my free screen →</button><p class="fine">We reply within one business day with how to send the borrower list. Send no borrower details in this form.</p></div>
+      <div class="asend"><button class="btn b-cu" type="submit">Request my free screen →</button><p class="fine">We reply within one business day with how to send the borrower list. Send no borrower details in this form.</p></div>
     </form>
   </div>
 </section>
@@ -264,7 +201,7 @@
 <footer><div class="wrap">
   <div>
     <span class="logo"><svg><use href="#mark"/></svg>herdstake</span>
-    <div class="flinks"><a href="/#how">How it works</a><a href="/sample-report.html">Sample report</a><a href="/records-screen.html">Sample screen</a><a href="/#pricing">Pricing</a><a href="/screwworm.html">Screwworm watch</a><a href="/cases/">Ghost cattle cases</a><a href="/buyer-notices.html">Buyer notices</a><a href="/lien-rules/">Lien rules</a><a href="/buyer-check/">Buyer check</a><a href="/feedyards.html">Feedyards</a><a href="/yards/">Feedyard directory</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
+    <div class="flinks"><a href="/#checks">What we check</a><a href="/sample-report.html">Sample report</a><a href="/records-screen.html">Sample screen</a><a href="/#pricing">Pricing</a><a href="/screwworm.html">Screwworm watch</a><a href="/cases/">Ghost cattle cases</a><a href="/buyer-notices.html">Buyer notices</a><a href="/lien-rules/">Lien rules</a><a href="/buyer-check/">Buyer check</a><a href="/feedyards.html">Feedyards</a><a href="/yards/">Feedyard directory</a><a href="mailto:team@herdstake.com">team@herdstake.com</a></div>
   </div>
   <p>© 2026 Herdstake LLC. Reports are for the ordering lender's own use and are not guarantees, appraisals or consumer reports.</p>
 </div></footer>

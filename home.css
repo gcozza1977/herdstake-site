@@ -3,7 +3,7 @@
 
    HERO PHOTO NEEDED: a real, approved photograph of a working cattle feedyard (pens with cattle,
    landscape, at least 2400 x 1350 px, dark enough on the left for white text).
-   STAND-IN photo: img/hero-feedyard.jpg is cropped from the approved mockup (low resolution). Replace with the real photo, same filename.
+   Hero photo: img/hero-feedyard.jpg (8K supplied by Gino, cropped to remove mockup text).
    To swap: save the photo as img/hero-feedyard.jpg and change --hero-photo below to url(/img/hero-feedyard.jpg). */
 .home{--hero-photo:url(/img/hero-feedyard.jpg);--ink:#0b0d0c;--char:#1a1d1b;--gray:#f1f0ed;--pale:#fff3e8;--orange:#ff8a3d;--orange-text:#b3470a;--body:#3a3f3b;--soft:#5a5f5b;--rule:#dcd8cf;background:#fff;font-size:17px}
 .home section{padding:104px 0;scroll-margin-top:72px}
@@ -32,8 +32,8 @@
 
 /* ---------- hero (ink, photo slot) ---------- */
 .hero2{position:relative;isolation:isolate;background:var(--ink);color:var(--bone);padding:176px 0 120px;overflow:hidden}
-.hero2::before{content:"";position:absolute;inset:0;z-index:-2;background:var(--hero-photo) 70% center/cover no-repeat}
-.hero2::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,13,12,.95) 0%,rgba(11,13,12,.78) 40%,rgba(11,13,12,.12) 100%),linear-gradient(0deg,rgba(11,13,12,.5),rgba(11,13,12,0) 35%)}
+.hero2::before{content:"";position:absolute;top:0;bottom:0;right:0;left:34%;z-index:-2;background:var(--hero-photo) 12% center/cover no-repeat}
+.hero2::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,13,12,1) 0%,rgba(11,13,12,1) 34.5%,rgba(11,13,12,.55) 54%,rgba(11,13,12,0) 80%),linear-gradient(0deg,rgba(11,13,12,.5),rgba(11,13,12,0) 35%)}
 .hero2-in{max-width:760px;display:flex;flex-direction:column;align-items:flex-start;gap:28px}
 .hchip{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border:1px solid rgba(243,239,230,.3);border-radius:999px;background:rgba(243,239,230,.07);font:600 13.5px/1.4 Inter,system-ui,sans-serif;color:rgba(243,239,230,.92)}
 .hchip i{width:8px;height:8px;border-radius:2px;background:var(--orange);flex:none}
@@ -210,3 +210,13 @@
  .tlist a{grid-template-columns:1fr}
  .tlist .tg{white-space:normal}
 }
+
+/* photos from the supplied 8K set */
+.ph-wide{display:block;width:100%;height:auto;aspect-ratio:21/7;object-fit:cover;border-radius:16px;margin:0 0 48px}
+.ph-pens{margin:48px 0 0;aspect-ratio:21/8}
+.offer{padding:0 0 44px;overflow:hidden;box-shadow:none}
+.offer-ph{display:block;width:100%;height:240px;object-fit:cover;object-position:60% 40%;border-bottom:8px solid var(--orange);margin-bottom:36px}
+.offer>:not(img){margin-left:44px;margin-right:44px}
+.offer .btn{margin-left:44px}
+@media(max-width:640px){.ph-wide{aspect-ratio:16/9;border-radius:12px;margin-bottom:32px}.ph-pens{margin-top:32px}.offer>:not(img){margin-left:24px;margin-right:24px}.offer .btn{margin-left:24px}.offer-ph{height:180px}}
+@media(max-width:760px){.hero2::before{left:0;background-position:62% center}.hero2::after{background:linear-gradient(180deg,rgba(11,13,12,.55) 0%,rgba(11,13,12,.8) 45%,rgba(11,13,12,.94) 100%)}}
